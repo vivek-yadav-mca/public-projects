@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="fB_app_id" translatable="false">dummydata</string>
+    <string name="fb_login_protocol_scheme" translatable="false">dummydata</string>
+
+
+    wrong
+    /*************** ironSource *************/
+    <string name="iS_app_id" translatable="false">dummydata</string>
+
+
+    /*************** Unity *************/
+    <string name="uni_ga_id" translatable="false">dummydata</string>
+    <string name="uni_banner_default" translatable="false">Banner_Android</string>
+    <string name="uni_interstitial_default" translatable="false">Interstitial_Android</string>
+    <string name="uni_rewarded_default" translatable="false">Rewarded_Android</string>
+
+
+    /*************** AppLovin *************/
+    <string name="apd_app_key" translatable="false">dummydata</string>
+
+
+    /*************** AppLovin *************/
+    <string name="aL_sdk_key" translatable="false">dummydata</string>
+    <string name="aL_banner_default" translatable="false">dummydata</string>
+    <string name="aL_interstitial_default" translatable="false">dummydata</string>
+    <string name="aL_rewarded_default" translatable="false">dummydata</string>
+    <string name="aL_native_default_medium" translatable="false">dummydata</string>
+
+
+    /*************** Tapjoy *************/
+    <string name="tJ_sdk_key" translatable="false">dummydata</string>
+    <string name="firebase_push_sender_id" translatable="false">dummydata</string>
+    <string name="tJ_offerwall_default" translatable="false">default_offerwall</string>
+
+
+    wrong
+    /**************    Chartboost    *************/
+    <string name="cB_app_id" translatable="false">dummydata</string>
+    <string name="cB_app_sign" translatable="false">dummydata</string>
+
+
+    /**************    Tapdaq    *************/
+    <string name="tad_app_id" translatable="false">dummydata</string>
+    <string name="tad_client_key" translatable="false">dummydata</string>
+    <string name="tad_all_default" translatable="false">default</string>
+    <string name="tad_banner_default" translatable="false">default_banner</string>
+    <string name="tad_inters_video_default" translatable="false">default_interstitial</string>
+    <string name="tad_rewarded_default" translatable="false">default_rewarded</string>
+    <string name="tad_native_default" translatable="false">default_native</string>
+
+
+/*******************************************************************************************************************/
+
+    /******* Original MoPub Ad-Unit IDs *******/
+
+
+    /******* Sample MoPub Ad-Unit IDs *******/
+
+
+
+/******* Original AdMob Ad-Unit IDs *******/
+    <string name="original_aM_app_id" translatable="false">dummydata</string>
+
+    <string name="aM_banner_default" translatable="false">dummydata</string>
+    <string name="aM_interstitial_default" translatable="false">dummydata</string>
+    <string name="aM_rewarded_default" translatable="false"> </string>
+    <string name="aM_native_default" translatable="false">dummydata</string>
+
+
+/******* Sample AdMob Ad-Unit IDs *******/
+    <string name="sample_aM_app_id" translatable="false">dummydata</string>
+
+</resources>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp">
+
+            <ImageView
+                android:id="@+id/contact_bsDialog_back_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
+                app:tint="@color/menu_color_dark_sky_blue"
+                android:src="@drawable/ic_back_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/baloo"
+                android:text="@string/contact_bsDialog_title"
+                android:textColor="@color/menu_color_dark_sky_blue"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/rating_bs_dialog_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="@string/contact_bsDialog_fullName"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/inputName"
+                        app:layout_constraintEnd_toStartOf="@+id/inputName"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/contact_dialog_editText_name"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginStart="16dp"-->
+<!--                        android:background="@drawable/bg_edit_text"-->
+<!--                        android:fontFamily="@font/baloo"-->
+<!--                        android:hint="Enter you full name"-->
+<!--                        android:paddingStart="8dp"-->
+<!--                        android:paddingEnd="8dp"-->
+<!--                        android:textColor="@color/menu_color_dark_sky_blue"-->
+<!--                        android:textColorHint="@color/grey"-->
+<!--                        android:textSize="17sp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintHorizontal_bias="0.5"-->
+<!--                        app:layout_constraintStart_toEndOf="@+id/textView6"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputName"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:background="@drawable/bg_edit_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/rating_bs_dialog_title"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/contact_dialog_editText_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/baloo"
+                            android:hint="Enter you full name"
+                            android:textColor="@color/menu_color_dark_sky_blue"
+                            android:textColorHint="@color/grey"
+                            android:textSize="17sp"
+                            android:textStyle="bold"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="@string/contact_bsDialog_emailId"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/contact_dialog_editText_email"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/contact_dialog_editText_email"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_edit_text"
+                        android:focusable="false"
+                        android:fontFamily="@font/baloo"
+                        android:inputType="none"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:text="test@gmail.com"
+                        android:textColor="#717171"
+                        android:textColorHint="@color/grey"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/inputName"
+                        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/baloo"
+                        android:text="@string/contact_bsDialog_mobileNo"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/contact_dialog_editText_mobile"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/contact_dialog_editText_mobile"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_edit_text"
+                        android:fontFamily="@font/baloo"
+                        android:hint="Enter you mobile number"
+                        android:inputType="number"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/contact_dialog_editText_email"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_dialog_editText_email" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/baloo"
+                        android:text="@string/contact_bsDialog_issue"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textSize="18sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_dialog_editText_mobile" />
+
+                    <EditText
+                        android:id="@+id/contact_dialog_editText_issueDetail"
+                        android:layout_width="0dp"
+                        android:layout_height="140dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/bg_edit_text"
+                        android:fontFamily="@font/baloo"
+                        android:gravity="top"
+                        android:maxLength="350"
+                        android:hint="@string/contact_bsDialog_issueDetail"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textColorHint="@color/grey"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+                    <TextView
+                        android:id="@+id/contact_bsDialog_issue_text_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:fontFamily="@font/baloo"
+                        android:text="350"
+                        android:textColor="@color/menu_color_dark_sky_blue"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/contact_dialog_editText_issueDetail"
+                        app:layout_constraintEnd_toEndOf="@+id/contact_dialog_editText_issueDetail" />
+
+                    <FrameLayout
+                        android:id="@+id/contact_bsDialog_submit_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/bg_button_simple_app_theme_color"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/contact_dialog_editText_issueDetail">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/baloo"
+                            android:text="@string/contact_bsDialog_submit_button"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+                    </FrameLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_200">#dummydata</color>
+    <color name="purple_500">#dummydata</color>
+    <color name="purple_700">#dummydata</color>
+    <color name="teal_200">#dummydata</color>
+    <color name="teal_700">#dummydata</color>
+    <color name="black">#dummydata</color>
+    <color name="white" tools:override="true">#dummydata</color>
+    <color name="greyout_disable">#dummydata</color>
+    <color name="greyout_disable1">#dummydata</color>
+    <color name="greyout_disable2">#dummydata</color>
+    <color name="system_accent3_700">#dummydata</color>
+
+    <color name="cartoon_game365_black_app_theme">#dummydata</color>
+    <color name="black_with_80_transparency">#dummydata</color>
+    <color name="purple_app_theme">#dummydata</color>
+    <color name="darker_blue_app_theme">#dummydata</color>
+    <color name="blue_app_theme">#dummydata</color>
+    <color name="light_blue_app_theme">#dummydata</color>
+
+    <color name="red_green_1">#dummydata</color>
+    <color name="red_green_2">#dummydata</color>
+    <color name="red_green_3">#dummydata</color>
+    <color name="red_green_4">#dummydata</color>
+    <color name="red_green_5">#dummydata</color>
+    <color name="red_green_6">#dummydata</color>
+    <color name="red_green_7">#dummydata</color>
+    <color name="red_green_8">#dummydata</color>
+    <color name="red_green_9">#dummydata</color>
+    <color name="red_green_10">#dummydata</color>
+    <color name="red_green_11">#dummydata</color>
+    <color name="red_green_12">#dummydata</color>
+    <color name="red_green_13">#dummydata</color>
+    <color name="red_green_14">#dummydata</color>
+    <color name="red_green_15">#dummydata</color>
+    <color name="red_green_16">#dummydata</color>
+
+
+    <color name="off_white_red">#dummydata</color>
+    <color name="red">#dummydata</color>
+    <color name="red_orange">#dummydata</color>
+    <color name="grey_white">#dummydata</color>
+    <color name="grey_white_40">#dummydata</color>
+    <color name="light_grey">#dummydata</color>
+    <color name="grey">#dummydata</color>
+    <color name="dark_grey">#dummydata</color>
+    <color name="darker_grey">#dummydata</color>
+    <color name="orange">#dummydata</color>
+    <color name="dark_orange_red">#dummydata</color>
+    <color name="orange_yellow">#dummydata</color>
+    <color name="yellow">#dummydata</color>
+    <color name="mustard_yellow">#dummydata</color>
+    <color name="leaderboard_yellow">#dummydata</color>
+    <color name="menu_color_dark_sky_blue">#dummydata</color>
+    <color name="sky_blue">#dummydata</color>
+    <color name="sky_blue_turquoise">#dummydata</color>
+    <color name="turquoise">#dummydata</color>
+    <color name="pink">#dummydata</color>
+    <color name="play_store_green">#dummydata</color>
+    <color name="green">#dummydata</color>
+    <color name="green_lime">#dummydata</color>
+    <color name="green_lime1">#dummydata</color>
+    <color name="lime">#dummydata</color>
+
+<!--    For Scratch View-->
+    <color name="scratch_start_gradient">#dummydata</color>
+    <color name="scratch_end_gradient">#dummydata</color>
+
+</resources>

@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">RSSB Shabad</string>
+
+    <string name="privacy_and_td_hyperlink">
+        By signing in you agree to our <a href="https://dummydata.in/privacy-policy/">privacy policy</a> and <a href="https://dummydata.in/terms-of-use/">terms of use.</a>
+    </string>
+
+
+    /*** ironSource Ad Unit ***/
+    <string name="ironSource_app_id">dummydata</string>
+
+
+    /*** Tapdaq Ad Unit ***/
+    <string name="tapdaq_app_id">dummydata</string>
+    <string name="tapdaq_client_key">dummydata</string>
+    <string name="tapdaq_banner_default">dummydata</string>
+    <string name="tapdaq_interstitial_default">default_interstitial</string>
+    <string name="tapdaq_banner_main">banner_main</string>
+    <string name="tapdaq_banner_book">banner_book</string>
+    <string name="tapdaq_native_default">native_default</string>
+
+
+    /*** AppLovin Ad Unit ***/
+    <string name="appl_sdk_key">dummydata-dummydata-dummydata</string>
+    <string name="appl_banner_default">dummydata</string>
+    <string name="appl_interstitial_default">dummydata</string>
+
+
+    /*** Facebook Ad Unit ***/
+    <string name="fb_ad_unit_50">dummydata</string>
+    <string name="fb_ad_unit_250">dummydata</string>
+
+
+    /*** Original Admob Ad Unit ***/
+
+    <string name="original_admob_app_id">dummydata</string>
+
+    <string name="admob_default_banner">dummydata</string>
+    <string name="admob_default_interstitial">dummydata</string>
+    <string name="admob_default_rewarded">dummydata</string>
+
+
+    /*** Sample Admob Ad Unit ***/
+
+
+</resources>

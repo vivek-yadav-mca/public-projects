@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#dummydata</color>
+    <color name="purple_500">#dummydata</color>
+    <color name="purple_700">#dummydata</color>
+    <color name="teal_200">#dummydata</color>
+    <color name="teal_700">#dummydata</color>
+    <color name="black">#dummydata</color>
+    <color name="white">#dummydata</color>
+    <color name="off_white_red">#dummydata</color>
+    <color name="splash_light_red">#dummydata</color>
+    <color name="splash_middle_red">#dummydata</color>
+    <color name="splash_dark_red">#dummydata</color>
+    <color name="play_store_green">#dummydata</color>
+
+    <color name="grey_dark">#dummydata</color>
+    <color name="grey_light">#dummydata</color>
+    <color name="red_app_theme">#dummydata</color>
+    <color name="red_dark_theme">#dummydata</color>
+    <color name="light_red_no">#dummydata</color>
+    <color name="blue_boeing">#dummydata</color>
+    <color name="green_yes">#dummydata</color>
+</resources>

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    dummydata Quiz Setting-->
+    <color name="dummydata_home_theme_color">#00003E</color>
+
+<!--    Individual dummydata quiz cardView setting-->
+    <dimen name="dummydata_gameOffer_indiv_quizCV_icon_width">120dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_quizCV_icon_height">90dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_quizCV_elevation">15dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_quizCV_cornerRadius">15dp</dimen>
+
+    <dimen name="dummydata_gameOffer_indiv_quizCV_side_icon_margin">4dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_quizCV_middle_icon_margin">2dp</dimen>
+    <dimen name="dummydata_cv_text_size">16sp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_quizCV_text_padding">2.5dp</dimen>
+
+<!--    Bollywood Quiz-->
+    <string name="dummydata_bollywood_quiz">Bollywood Quiz</string>
+    <color name="dummydata_bollywood_quiz">#F4B000</color>
+    <string name="dummydata_bollywood_quiz_url" translatable="false">dummydata</string>
+
+<!--    Cricket Quiz-->
+    <string name="dummydata_cricket_quiz">Cricket Quiz</string>
+    <color name="dummydata_cricket_quiz">#1C84EF</color>
+<!--    <string name="dummydata_cricket_quiz_url">dummydata</string>-->
+    <string name="dummydata_cricket_quiz_url" translatable="false">dummydata</string>
+
+<!--    Tech Quiz-->
+    <string name="dummydata_tech_quiz">Technology Quiz</string>
+    <color name="dummydata_tech_quiz">#10297B</color>
+    <string name="dummydata_tech_quiz_url" translatable="false">dummydata</string>
+
+<!--    Gk Quiz-->
+    <string name="dummydata_gk_basic_quiz">General Knowledge Quiz</string>
+    <color name="dummydata_gk_basic_quiz">#010128</color>
+<!--    <string name="dummydata_gk_basic_quiz_url">dummydata</string>-->
+    <string name="dummydata_gk_basic_quiz_url" translatable="false">dummydata</string>
+
+<!--    IPL Quiz-->
+    <string name="dummydata_ipl_quiz">IPL Quiz</string>
+    <color name="dummydata_ipl_quiz">#211EA2</color>
+    <string name="dummydata_ipl_quiz_url" translatable="false">dummydata</string>
+
+<!--    Rec IPL Quiz-->
+    <string name="dummydata_rec_ipl_quiz_50k">IPL Quiz</string>
+    <color name="dummydata_rec_ipl_quiz_50k">#484882</color>
+    <string name="dummydata_rec_ipl_quiz_50k_url" translatable="false">dummydata</string>
+
+<!--    Rec 10+2 Exam Quiz-->
+    <string name="dummydata_rec_10_2_exam_quiz_50k">10+2 Exam Quiz</string>
+    <color name="dummydata_rec_10_2_exam_quiz_50k">#68116A</color>
+    <string name="dummydata_rec_10_2_exam_quiz_50k_url" translatable="false">dummydata</string>
+
+<!--    Rec hi bank po Quiz-->
+    <string name="dummydata_rec_hi_bank_po_quiz_50k">Bank PO Quiz</string>
+    <color name="dummydata_rec_hi_bank_po_quiz_50k">#1836C3</color>
+    <string name="dummydata_rec_hi_bank_po_quiz_50k_url" translatable="false">dummydata</string>
+
+<!--    /**-->
+<!--    -->
+<!--    -->
+<!--    **/-->
+
+<!--    dummydata Quiz / Fantasy Setting-->
+    <color name="dummydata_home_theme_color">#00003E</color>
+    <!--    Individual dummydata quiz cardView setting-->
+    <dimen name="dummydata_gameOffer_indiv_predictCV_icon_width">120dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_predictCV_icon_height">80dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_predictCV_elevation">15dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_predictCV_cornerRadius">15dp</dimen>
+
+    <dimen name="dummydata_gameOffer_indiv_predictCV_side_icon_margin">4dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_predictCV_middle_icon_margin">2dp</dimen>
+    <dimen name="dummydata_cv_text_size">16sp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_predictCV_text_padding">2.5dp</dimen>
+
+<!--    Predict Cricket Result-->
+    <string name="dummydata_predict_cricket_result_1">Cricket Result Prediction Game</string>
+    <color name="dummydata_predict_cricket_result_1">#1B158D</color>
+    <string name="dummydata_predict_cricket_result_url_1" translatable="false">dummydata</string>
+
+    <string name="dummydata_predict_cricket_result_2">Cricket Result Prediction Game</string>
+    <color name="dummydata_predict_cricket_result_2">#004898</color>
+    <string name="dummydata_predict_cricket_result_url_2" translatable="false">dummydata</string>
+
+<!--    Predict Movie Result-->
+    <string name="dummydata_predict_movie">Movie Result Prediction Game</string>
+    <color name="dummydata_predict_movie">#AA0102</color>
+    <string name="dummydata_predict_movie_url" translatable="false">dummydata</string>
+
+<!--    Predict Result Win Coins-->
+    <string name="dummydata_predict_result_win_coin">Result Prediction Game</string>
+    <color name="dummydata_predict_result_win_coin">#A52592</color>
+    <string name="dummydata_predict_result_win_coin_url" translatable="false">dummydata</string>
+
+<!--    /**-->
+<!--    -->
+<!--    -->
+<!--    **/-->
+
+<!--    MGL Game Setting-->
+
+<!--    Action-->
+    <string name="dummydata_earth_hero">Earth Hero</string>
+    <color name="dummydata_earth_hero">#010E1B</color>
+    <string name="dummydata_earth_hero_url" translatable="false">dummydata/earth-hero49</string>
+
+    <string name="dummydata_knife_hit">Knife Hit</string>
+    <color name="dummydata_knife_hit">#59254C</color>
+    <string name="dummydata_knife_hit_url" translatable="false">dummydata/knife-hit</string>
+
+
+<!--    Adventure-->
+    <string name="dummydata_bhaag_ninja">Bhaag Ninja</string>
+    <color name="dummydata_bhaag_ninja">#805230</color>
+    <string name="dummydata_bhaag_ninja_url" translatable="false">dummydata/bhaag-ninja</string>
+
+
+<!--    Arcade-->
+    <string name="dummydata_box_tower">Box Tower</string>
+    <color name="dummydata_box_tower">#7DB999</color>
+    <string name="dummydata_box_tower_url" translatable="false">dummydata/final-box50</string>
+
+    <string name="dummydata_bubble_shooter">Bubble Shooter</string>
+    <color name="dummydata_bubble_shooter">#DC49D5</color>
+    <string name="dummydata_bubble_shooter_url" translatable="false">dummydata/bubble-shooter51</string>
+
+    <string name="dummydata_fruit_slash">Fruit Slash</string>
+    <color name="dummydata_fruit_slash">#E65F0E</color>
+    <string name="dummydata_fruit_slash_url" translatable="false">dummydata/fruit-slash</string>
+
+
+<!--    Sports and Racing-->
+    <string name="dummydata_basketball">Basketball</string>
+    <color name="dummydata_basketball">#01182E</color>
+    <string name="dummydata_basketball_url" translatable="false">dummydata/basket-ball</string>
+
+    <string name="dummydata_dont_crash">Don\'t Crash</string>
+    <color name="dummydata_dont_crash">#FFB819</color>
+    <string name="dummydata_dont_crash_url" translatable="false">dummydata/donot-crash2</string>
+
+
+<!--    /**-->
+<!--    -->
+<!--    -->
+<!--    **/-->
+
+
+
+<!--    dummydata Setting-->
+    <color name="dummydata_home_theme_color">#3D51B6</color>
+    <dimen name="dummydata_home_cv_icon_height">100dp</dimen>
+    <dimen name="dummydata_cv_text_size">14sp</dimen>
+
+<!--    Individual Game cardView setting-->
+    <dimen name="dummydata_gameOffer_baseCV_show_more_icon_width">30dp</dimen>
+    <dimen name="dummydata_gameOffer_baseCV_show_more_icon_height">24dp</dimen>
+    <dimen name="dummydata_gameOffer_baseCV_gameCV_elevation">0dp</dimen>
+    <dimen name="dummydata_gameOffer_baseCV_gameCV_cornerRadius">15dp</dimen>
+    <dimen name="dummydata_gameOffer_baseCV_gameCV_stroke_width">1dp</dimen>
+    <color name="dummydata_gameOffer_baseCV_gameCV_stroke_color">@color/white</color>
+
+<!--    Individual Game cardView CHILD setting-->
+    <dimen name="dummydata_gameOffer_indiv_gameCV_icon_width">120dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_gameCV_icon_height">80dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_gameCV_elevation">15dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_gameCV_cornerRadius">15dp</dimen>
+
+    <dimen name="dummydata_gameOffer_indiv_gameCV_side_icon_margin">4dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_gameCV_middle_icon_margin">2dp</dimen>
+    <dimen name="dummydata_gameOffer_indiv_gameCV_text_padding">2.5dp</dimen>
+
+<!--    timer bsDialog setting-->
+    <dimen name="dummydata_timer_bsDialog_game_icon_width">122dp</dimen>
+    <dimen name="dummydata_timer_bsDialog_game_icon_height">100dp</dimen>
+<!--    dummydata Setting-->
+
+
+<!--    Action-->
+    <string name="dummydata_blazing_blades">Blazing Blades</string>
+    <color name="dummydata_blazing_blades">#01182E</color>
+    <string name="dummydata_blazing_blades_url" translatable="false">https://www.dummydata.com/g/UYiznUAya?iddummydata</string>
+
+    <string name="dummydata_bottle_shoot">Bottle Shoot</string>
+    <color name="dummydata_bottle_shoot">#EA9249</color>
+    <string name="dummydata_bottle_shoot_url" translatable="false">https://www.dummydata.com/g/B1fSpMkP51m?iddummydata</string>
+
+    <string name="dummydata_boulder_blast">Boulder Blast</string>
+    <color name="dummydata_boulder_blast">#28AE5C</color>
+    <string name="dummydata_boulder_blast_url" translatable="false">https://www.dummydata.com/g/HkTQJhTXqRS?iddummydata</string>
+
+    <string name="dummydata_saloon_robbery">Saloon Robbery</string>
+    <color name="dummydata_saloon_robbery">#5E2902</color>
+    <string name="dummydata_saloon_robbery_url" translatable="false">https://www.dummydata.com/g/SJ8X6zyPcyX?iddummydata</string>
+
+    <string name="dummydata_savage_revenge">Savage Revenge</string>
+    <color name="dummydata_savage_revenge">#312519</color>
+    <string name="dummydata_savage_revenge_url" translatable="false">https://www.dummydata.com/g/ry6bwfUt_Jg?iddummydata</string>
+
+    <string name="dummydata_slap_fest">Slap Fest</string>
+    <color name="dummydata_slap_fest">#7F4944</color>
+    <string name="dummydata_slap_fest_url" translatable="false">https://www.dummydata.com/g/ryN9EGAQa?iddummydata</string>
+
+    <string name="dummydata_zombies_cant_jump">Zombies Can\'t Jump</string>
+    <color name="dummydata_zombies_cant_jump">#B2A587</color>
+    <string name="dummydata_zombies_cant_jump_url" translatable="false">https://www.dummydata.com/g/rkxMV8TI6Wg?iddummydata</string>
+
+
+<!--    Adventure-->
+
+    <string name="dummydata_dodge_bot">Dodge Bot</string>
+    <color name="dummydata_dodge_bot">#391D4B</color>
+    <string name="dummydata_dodge_bot_url" translatable="false">https://www.dummydata.com/g/SJ2OGpIn?iddummydata</string>
+
+    <string name="dummydata_escape_run">Escape Run</string>
+    <color name="dummydata_escape_run">#603C2C</color>
+    <string name="dummydata_escape_run_url" translatable="false">https://www.dummydata.com/g/Skz4pzkDqyX?iddummydata</string>
+
+    <string name="dummydata_flying_school">Flying School</string>
+    <color name="dummydata_flying_school">#699418</color>
+    <string name="dummydata_flying_school_url" translatable="false">https://www.dummydata.com/g/VJOGOyGb9l?iddummydata</string>
+
+    <string name="dummydata_jimbo_jump">Jimbo Jump</string>
+    <color name="dummydata_jimbo_jump">#7F3925</color>
+    <string name="dummydata_jimbo_jump_url" translatable="false">https://www.dummydata.com/g/BkXW1a__?iddummydata</string>
+
+    <string name="dummydata_knife_flip">Knife Flip</string>
+    <color name="dummydata_knife_flip">#5BCEFF</color>
+    <string name="dummydata_knife_flip_url" translatable="false">https://www.dummydata.com/g/H1PJn6mqAr?iddummydata</string>
+
+    <string name="dummydata_rope_ninja">Rope Ninja</string>
+    <color name="dummydata_rope_ninja">#D07A69</color>
+    <string name="dummydata_rope_ninja_url" translatable="false">https://www.dummydata.com/g/r10-NLT86bx?iddummydata</string>
+
+    <string name="dummydata_sticky_goo">Sticky Goo</string>
+    <color name="dummydata_sticky_goo">#3D552D</color>
+    <string name="dummydata_sticky_goo_url" translatable="false">https://www.dummydata.com/g/rJJMVIa8p-x?iddummydata</string>
+
+    <string name="dummydata_sway_bay">Sway Bay</string>
+    <color name="dummydata_sway_bay">#51D1EA</color>
+    <string name="dummydata_sway_bay_url" translatable="false">https://www.dummydata.com/g/B1PMIp4XCe?iddummydata</string>
+
+
+<!--    Arcade-->
+
+    <string name="dummydata_bouncy">Bouncy</string>
+    <color name="dummydata_bouncy">#9318EF</color>
+    <string name="dummydata_bouncy_url" translatable="false">https://www.dummydata.com/g/H1Tz6z1Dqym?iddummydata</string>
+
+    <string name="dummydata_falling_through">Falling Through</string>
+    <color name="dummydata_falling_through">#234533</color>
+    <string name="dummydata_falling_through_url" translatable="false">https://www.dummydata.com/g/ByGqEfCXa?iddummydata</string>
+
+    <string name="dummydata_flexi_snake">Flexi Snake</string>
+    <color name="dummydata_flexi_snake">#099CF0</color>
+    <string name="dummydata_flexi_snake_url" translatable="false">https://www.dummydata.com/g/SkQwnwnbK?iddummydata</string>
+
+    <string name="dummydata_fruit_chop">Fruit Chop</string>
+    <color name="dummydata_fruit_chop">#361D0F</color>
+    <string name="dummydata_fruit_chop_url" translatable="false">https://www.dummydata.com/g/rkWfy2pXq0r?iddummydata</string>
+
+    <string name="dummydata_grumpy_gorilla">Grumpy Gorilla</string>
+    <color name="dummydata_grumpy_gorilla">#085E3A</color>
+    <string name="dummydata_grumpy_gorilla_url" translatable="false">https://www.dummydata.com/g/N1sZfO1fWqg?iddummydata</string>
+
+    <string name="dummydata_light_tower">Light Tower</string>
+    <color name="dummydata_light_tower">#318D87</color>
+    <string name="dummydata_light_tower_url" translatable="false">https://www.dummydata.com/g/SJsqNMAmp?iddummydata</string>
+
+    <string name="dummydata_sheep_stacking">Sheep Stacking</string>
+    <color name="dummydata_sheep_stacking">#77C028</color>
+    <string name="dummydata_sheep_stacking_url" translatable="false">https://www.dummydata.com/g/V1IZG_1f-qg?iddummydata</string>
+
+    <string name="dummydata_tower_twist">Tower Twist</string>
+    <color name="dummydata_tower_twist">#6446E2</color>
+    <string name="dummydata_tower_twist_url" translatable="false">https://www.dummydata.com/g/HJT46GkPcy7?iddummydata</string>
+
+    <string name="dummydata_tricky_trip">Tricky Trip</string>
+    <color name="dummydata_tricky_trip">#01021D</color>
+    <string name="dummydata_tricky_trip_url" translatable="false">https://www.dummydata.com/g/NJ3xGOyfb5l?iddummydata</string>
+
+
+<!--    Puzzle & Logic-->
+
+    <string name="dummydata_2048">2048</string>
+    <color name="dummydata_2048">#481749</color>
+    <string name="dummydata_2048_url" translatable="false">https://www.dummydata.com/g/NyM_JGWcx?iddummydata</string>
+
+    <string name="dummydata_countdown_calculator">Countdown Calculator</string>
+    <color name="dummydata_countdown_calculator">#047DCF</color>
+    <string name="dummydata_countdown_calculator_url" translatable="false">https://www.dummydata.com/g/By5syVo5?iddummydata</string>
+
+    <string name="dummydata_high_or_low">High Or Low</string>
+    <color name="dummydata_high_or_low">#8C0103</color>
+    <string name="dummydata_high_or_low_url" translatable="false">https://www.dummydata.com/g/H1eGU64XRg?iddummydata</string>
+
+    <string name="dummydata_jello_go_round">Jello Go Round</string>
+    <color name="dummydata_jello_go_round">#9CCEED</color>
+    <string name="dummydata_jello_go_round_url" translatable="false">https://www.dummydata.com/g/SkRZZUoXI8g?iddummydata</string>
+
+    <string name="dummydata_jelly_slice">Jelly Slice</string>
+    <color name="dummydata_jelly_slice">#8484BD</color>
+    <string name="dummydata_jelly_slice_url" translatable="false">https://www.dummydata.com/g/SJ3-ELT8p-x?iddummydata</string>
+
+    <string name="dummydata_memory_match_up">Memory Match Up</string>
+    <color name="dummydata_memory_match_up">#333333</color>
+    <string name="dummydata_memory_match_up_url" translatable="false">https://www.dummydata.com/g/HkmMITNQ0l?iddummydata</string>
+
+    <string name="dummydata_slit_sight">Slit Sight</string>
+    <color name="dummydata_slit_sight">#0AA5D7</color>
+    <string name="dummydata_slit_sight_url" translatable="false">https://www.dummydata.com/g/Bk25EzR7T?iddummydata</string>
+
+    <string name="dummydata_sudoko_classic">Sudoko Classic</string>
+    <color name="dummydata_sudoko_classic">#1B21B1</color>
+    <string name="dummydata_sudoko_classic_url" translatable="false">https://www.dummydata.com/g/SJgx126Qc0H?iddummydata</string>
+
+    <string name="dummydata_tic_tac_toe_11">Tic Tac Toe 11</string>
+    <color name="dummydata_tic_tac_toe_11">#027DEF</color>
+    <string name="dummydata_tic_tac_toe_11_url" translatable="false">https://www.dummydata.com/g/Hk2yhp7cCH?iddummydata</string>
+
+
+<!--    Sports & Racing-->
+
+    <string name="dummydata_archery_champs">Archery Champs</string>
+    <color name="dummydata_archery_champs">#54986A</color>
+    <string name="dummydata_archery_champs_url" translatable="false">https://www.dummydata.com/g/Bk9ynTQqCB?iddummydata</string>
+
+    <string name="dummydata_basket_champs">Basket Champs</string>
+    <color name="dummydata_basket_champs">#BC763C</color>
+    <string name="dummydata_basket_champs_url" translatable="false">https://www.dummydata.com/g/S1_V6GyP5ym?iddummydata</string>
+
+    <string name="dummydata_basketball_master">Basketball Master</string>
+    <color name="dummydata_basketball_master">#66D17F</color>
+    <string name="dummydata_basketball_master_url" translatable="false">https://www.dummydata.com/g/HyCKrWd4?iddummydata</string>
+
+    <string name="dummydata_city_cricket">City Cricket</string>
+    <color name="dummydata_city_cricket">#0E3E40</color>
+    <string name="dummydata_city_cricket_url" translatable="false">https://www.dummydata.com/g/HJP4afkvqJQ?iddummydata</string>
+
+    <string name="dummydata_dribble_kings">Dribble Kings</string>
+    <color name="dummydata_dribble_kings">#639948</color>
+    <string name="dummydata_dribble_kings_url" translatable="false">https://www.dummydata.com/g/SkJf58Ouf0?iddummydata</string>
+
+    <string name="dummydata_furious_speed">Furious Speed</string>
+    <color name="dummydata_furious_speed">#474747</color>
+    <string name="dummydata_furious_speed_url" translatable="false">https://www.dummydata.com/g/rkwCYBZuV?iddummydata</string>
+
+    <string name="dummydata_groovy_ski">Groovy Ski</string>
+    <color name="dummydata_groovy_ski">#9C3E06</color>
+    <string name="dummydata_groovy_ski_url" translatable="false">https://www.dummydata.com/g/EJaG_JfW9l?iddummydata</string>
+
+    <string name="dummydata_homerun_hit">Homerun Hit</string>
+    <color name="dummydata_homerun_hit">#0F0F0F</color>
+    <string name="dummydata_homerun_hit_url" translatable="false">https://www.dummydata.com/g/B1H5NfCXa?iddummydata</string>
+
+    <string name="dummydata_quack_hunt">Quack Hunt</string>
+    <color name="dummydata_quack_hunt">#8E5539</color>
+    <string name="dummydata_quack_hunt_url" translatable="false">https://www.dummydata.com/g/SJXbW8smUUx?iddummydata</string>
+
+    <string name="dummydata_super_goalie_auditions">Super Goalie Auditions</string>
+    <color name="dummydata_super_goalie_auditions">#46911D</color>
+    <string name="dummydata_super_goalie_auditions_url" translatable="false">https://www.dummydata.com/g/SyO94GA7p?iddummydata</string>
+
+    <string name="dummydata_table_tennis_shots">Table Tennis Shots</string>
+    <color name="dummydata_table_tennis_shots">#1E85FF</color>
+    <string name="dummydata_table_tennis_shots_url" translatable="false">https://www.dummydata.com/g/HJY4pfJP9JQ?iddummydata</string>
+
+
+<!--    Strategy-->
+
+    <string name="dummydata_brick_plunge">Brick Plunge</string>
+    <color name="dummydata_brick_plunge">#508FDB</color>
+    <string name="dummydata_brick_plunge_url" translatable="false">https://www.dummydata.com/g/BJ9bvzIKdJl?iddummydata</string>
+
+    <string name="dummydata_bubble_wipeout">Bubble Wipeout</string>
+    <color name="dummydata_bubble_wipeout">#E05483</color>
+    <string name="dummydata_bubble_wipeout_url" translatable="false">https://www.dummydata.com/g/H1AN6fkwqJ7?iddummydata</string>
+
+    <string name="dummydata_carrom_hero">Carrom Hero</string>
+    <color name="dummydata_carrom_hero">#C7956D</color>
+    <string name="dummydata_carrom_hero_url" translatable="false">https://www.dummydata.com/g/H1Hgyn6XqAS?iddummydata</string>
+
+    <string name="dummydata_hex_burst">Hex Burst</string>
+    <color name="dummydata_hex_burst">#20ECEB</color>
+    <string name="dummydata_hex_burst_url" translatable="false">https://www.dummydata.com/g/H1abja2M_eb?iddummydata</string>
+
+    <string name="dummydata_ludo">Ludo</string>
+    <color name="dummydata_ludo">#004370</color>
+    <string name="dummydata_ludo_url" translatable="false">https://www.dummydata.com/g/SkhljT2fdgb?iddummydata</string>
+
+    <string name="dummydata_rummy">Rummy</string>
+    <color name="dummydata_rummy">#650012</color>
+    <string name="dummydata_rummy_url" translatable="false">https://www.dummydata.com/g/HJNf1npXqAr?iddummydata</string>
+
+    <string name="dummydata_ship_it_up">Ship It Up</string>
+    <color name="dummydata_ship_it_up">#3CDAEF</color>
+    <string name="dummydata_ship_it_up_url" translatable="false">https://www.dummydata.com/g/rJybo6nfdgb?iddummydata</string>
+
+    <string name="dummydata_solitaire_gold">Solitaire Gold</string>
+    <color name="dummydata_solitaire_gold">#4DDE92</color>
+    <string name="dummydata_solitaire_gold_url" translatable="false">https://www.dummydata.com/g/rkPlk2T7qAr?iddummydata</string>
+
+    <string name="dummydata_traffic_command">Traffic Command</string>
+    <color name="dummydata_traffic_command">#54545D</color>
+    <string name="dummydata_traffic_command_url" translatable="false">https://www.dummydata.com/g/SykGDfUKOkg?iddummydata</string>
+
+    <string name="dummydata_yummy_taco">Yummy Taco</string>
+    <color name="dummydata_yummy_taco">#DCBD7E</color>
+    <string name="dummydata_yummy_taco_url" translatable="false">https://www.dummydata.com/g/rJyWCKHbON?iddummydata</string>
+
+</resources>

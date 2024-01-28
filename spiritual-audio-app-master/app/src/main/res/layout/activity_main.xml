@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/next_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white_red"
+    tools:context=".activity.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_red_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_red_gradient" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/app_icon_transp_512"
+                android:transitionName="logo_image"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/app_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="90dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="RSSB Shabad"
+                android:textColor="@color/off_white_red"
+                android:textSize="30sp"
+                android:transitionName="logo_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/app_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="195dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_card_view"
+        app:srcCompat="@drawable/app_carousel_1_min" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="-4dp"
+        android:layout_marginEnd="-4dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginBottom="-4dp"
+        app:cardBackgroundColor="@color/red_app_theme"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintTop_toTopOf="@+id/upstox_refer_card"
+        app:layout_constraintBottom_toBottomOf="@+id/upstox_refer_card"
+        app:layout_constraintStart_toStartOf="@+id/upstox_refer_card"
+        app:layout_constraintEnd_toEndOf="@+id/upstox_refer_card" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/upstox_refer_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="2dp"
+                android:src="@drawable/ic_referral_upstox_logo"
+                app:layout_constraintEnd_toStartOf="@+id/textView39"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="Get \u20B9 40 instant"
+                android:textColor="@color/play_store_green"
+                android:textSize="26sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView13"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="उपस्टेक्स का मुफ्त खाता खोलें और पाएं ₹40 रुपये"
+                android:textColor="@color/red_dark_theme"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <FrameLayout-->
+<!--        android:id="@+id/home_item_list"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/rating_button_layout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/upstox_refer_card"-->
+<!--        app:layout_constraintVertical_bias="0.0">-->
+<!--        -->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical">-->
+<!--            -->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/home_shabad_cardV"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="100dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/home_shabad_cardV_photo"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="100dp"-->
+<!--                                app:srcCompat="@drawable/shabad" />-->
+<!--                        </FrameLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/home_shabad_cardV_name"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@color/red_app_theme"-->
+<!--                            android:fontFamily="@font/roboto_bold"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Shabad"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/home_satsang_cardV"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="100dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/home_satsang_cardV_photo"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="100dp"-->
+<!--                                app:srcCompat="@drawable/shabad" />-->
+<!--                        </FrameLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/home_satsang_cardV_name"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@color/red_app_theme"-->
+<!--                            android:fontFamily="@font/roboto_bold"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Shabad"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--                <androidx.cardview.widget.CardView-->
+<!--                    android:id="@+id/home_story_cardV"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:layout_marginTop="8dp"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:layout_marginBottom="8dp"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    app:cardCornerRadius="10dp"-->
+<!--                    app:cardElevation="4dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:orientation="vertical">-->
+
+<!--                        <FrameLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="100dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/home_story_cardV_photo"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="100dp"-->
+<!--                                app:srcCompat="@drawable/shabad" />-->
+<!--                        </FrameLayout>-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/home_story_cardV_name"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="@color/red_app_theme"-->
+<!--                            android:fontFamily="@font/roboto_bold"-->
+<!--                            android:gravity="center"-->
+<!--                            android:text="Shabad"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="16sp" />-->
+<!--                    </LinearLayout>-->
+<!--                </androidx.cardview.widget.CardView>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+<!--                -->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+<!--    </FrameLayout>-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_item_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/rating_button_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upstox_refer_card"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/layout_rv_home_item" />
+
+    <FrameLayout
+        android:id="@+id/rating_button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-12dp"
+        app:layout_constraintBottom_toTopOf="@+id/main_ad_container"
+        app:layout_constraintEnd_toStartOf="@+id/share_button_layout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <android.widget.Button
+            android:id="@+id/google_play_butn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button_home"
+            android:drawableLeft="@drawable/ic_google_play_2"
+            android:elevation="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingLeft="5dp"
+            android:paddingRight="10dp"
+            android:text="Rate us on Play Store"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/shining_effect_image"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="-10dp"
+            android:elevation="40dp"
+            android:src="@drawable/shining_effect" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/share_button_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/rating_button_layout"
+        app:layout_constraintTop_toTopOf="@+id/rating_button_layout">
+
+        <android.widget.Button
+            android:id="@+id/share_app_butn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_button_home"
+            android:drawableLeft="@drawable/ic_share"
+            android:elevation="20dp"
+            android:fontFamily="@font/roboto_bold"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingLeft="15dp"
+            android:paddingTop="2dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp"
+            android:text="Share this app"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" />
+
+    </FrameLayout>
+
+    <!--    <android.widget.Button-->
+    <!--        android:id="@+id/share_app_butn"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:background="@drawable/bg_button_home"-->
+    <!--        android:drawableLeft="@drawable/ic_share"-->
+    <!--        android:fontFamily="@font/roboto_bold"-->
+    <!--        android:paddingLeft="15dp"-->
+    <!--        android:paddingTop="2dp"-->
+    <!--        android:paddingRight="10dp"-->
+    <!--        android:paddingBottom="2dp"-->
+    <!--        android:text="Share this app"-->
+    <!--        android:textColor="@color/white"-->
+    <!--        android:textSize="18sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@+id/google_play_butn"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/rating_button_layout"-->
+    <!--        app:layout_constraintTop_toTopOf="@+id/google_play_butn"-->
+    <!--        android:foreground="?android:attr/selectableItemBackground"/>-->
+
+<!--    <com.zero07.rssb.NativeAdSmallLayout-->
+<!--        android:id="@+id/main_native_ad_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <FrameLayout
+        android:id="@+id/main_ad_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/off_white_red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--    <com.google.android.gms.ads.AdView-->
+    <!--        android:id="@+id/adView"-->
+    <!--        android:layout_width="400dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        app:adSize="BANNER"-->
+    <!--        app:adUnitId="@string/main_activity_admob_unit_50"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--    </com.google.android.gms.ads.AdView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

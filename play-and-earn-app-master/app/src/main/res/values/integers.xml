@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    For Flip View-->
+    <integer name="anim_length">500</integer>
+    <integer name="anim_length_half">250</integer>
+<!--    For Flip View-->
+
+</resources>

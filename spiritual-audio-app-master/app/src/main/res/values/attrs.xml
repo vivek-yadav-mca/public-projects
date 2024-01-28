@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="applovin_banner_50">50dp</dimen>
+    <dimen name="applovin_banner_90">90dp</dimen>
+
+</resources>

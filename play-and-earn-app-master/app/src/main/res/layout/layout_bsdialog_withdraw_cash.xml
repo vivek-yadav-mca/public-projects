@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_top_darker_blue_app_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_round_all_white"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/bsdialog_withdraw_cash_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:text="@string/withdraw_cash_bsdialog_title"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/white"
+                android:layout_gravity="center" />
+
+
+            <TextView
+                android:id="@+id/bsdialog_withdraw_cash_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:gravity="center"
+                android:text="@string/withdraw_cash_bsdialog_note"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/baloo" />
+
+            <FrameLayout
+                android:id="@+id/withWinningCash_bsDialog_inputDetail_frameL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/withCash_bsDialog_inputName_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/red"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/baloo"
+                        android:hint="@string/withdraw_cash_bsdialog_your_name_hint"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/withCash_bsDialog_inputName_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/baloo"
+                            android:paddingBottom="5dp"
+                            android:gravity="center|start"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/withdraw_cash_bsdialog_paypal_email_note"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/roboto_medium_italic" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/withCash_bsDialog_inputEmail_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/red"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/baloo"
+                        android:hint="@string/withdraw_cash_bsdialog_registered_email_hint"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/withCash_bsDialog_inputEmail_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/baloo"
+                            android:paddingBottom="5dp"
+                            android:gravity="center|start"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/withCash_bsDialog_inputMobile_layout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        app:boxStrokeColor="@color/white"
+                        app:boxStrokeErrorColor="@color/red"
+                        app:boxStrokeWidth="2dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginBottom="8dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/baloo"
+                        android:hint="@string/withdraw_cash_bsdialog_mobile_number_hint"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/withCash_bsDialog_inputMobile_editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center|start"
+                            android:layout_gravity="center"
+                            android:paddingBottom="5dp"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/bsDialog_withdraw_cash_btn_frame"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_clicked_drawble_green_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <TextView
+                    android:id="@+id/withWinningCash_bsDialog_btn_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:drawableStart="@drawable/ic_arrow_down_24px"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                    android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

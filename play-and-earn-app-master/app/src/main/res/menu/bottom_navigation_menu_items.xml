@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home"
+        android:title="@string/menu_HOME"
+        android:icon="@drawable/ic_home_black" />
+
+    <item
+        android:id="@+id/leaderboard"
+        android:title="@string/menu_RANK"
+        android:icon="@drawable/rank_3" />
+
+    <item
+        android:id="@+id/offerwall_is"
+        android:title="@string/menu_GAME"
+        android:icon="@drawable/game_controller_2" />
+
+    <item
+        android:id="@+id/wallet"
+        android:title="@string/menu_WALLET"
+        android:icon="@drawable/wallet_4" />
+
+    <item
+        android:id="@+id/user_profile"
+        android:title="@string/menu_PROFILE"
+        android:icon="@drawable/ic_settings_24px" />
+
+</menu>

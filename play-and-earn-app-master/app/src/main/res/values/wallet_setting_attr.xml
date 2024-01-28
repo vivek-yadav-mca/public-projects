@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="wallet_redeemCashCoins_ticket_orientation">0</integer>
+    <integer name="wallet_redeemCashCoins_ticket_cornerType">2</integer>
+    <dimen name="wallet_redeemCashCoins_ticket_cornerElevation">14dp</dimen>
+    <dimen name="wallet_redeemCashCoins_ticket_cornerRadius">6dp</dimen>
+    <dimen name="wallet_redeemCashCoins_ticket_scallopRadius">8dp</dimen>
+    <integer name="wallet_redeemCashCoins_ticket_scallopPostion">61</integer>
+    <integer name="wallet_redeemCashCoins_ticket_dividerType">1</integer>
+    <dimen name="wallet_redeemCashCoins_ticket_dividerPadding">0dp</dimen>
+    <color name="wallet_redeemCashCoins_ticket_dividerColor">@color/grey_white</color>
+    <dimen name="wallet_redeemCashCoins_ticket_dividerWidth">1.5dp</dimen>
+    <dimen name="wallet_redeemCashCoins_ticket_dividerDashGap">2dp</dimen>
+    <dimen name="wallet_redeemCashCoins_ticket_dividerDashLength">6dp</dimen>
+
+    <dimen name="wallet_withdrawCash_ticketFrame_width">0dp</dimen>
+    <dimen name="wallet_withdrawCash_ticketFrame_height">210dp</dimen>
+
+    <dimen name="wallet_withdrawCash_imageCV_width">130dp</dimen>
+    <dimen name="wallet_withdrawCash_imageCV_height">60dp</dimen>
+    <dimen name="wallet_withdrawCash_imageCV_cornerRadius">8dp</dimen>
+    <dimen name="wallet_withdrawCash_image_width">60dp</dimen>
+    <dimen name="wallet_withdrawCash_image_height">60dp</dimen>
+
+    <dimen name="wallet_withdrawCash_offer_textSize">15sp</dimen>
+    <color name="wallet_withdrawCash_offer_textColor">@color/play_store_green</color>
+
+    <string name="wallet_withdrawCash_offer_10usd_googlePlay_text">Get Rs. 10 Google Play Gift Card</string>
+    <string name="wallet_withdrawCash_offer_20usd_googlePlay_text">Get Rs. 20 Google Play Gift Card</string>
+
+    <dimen name="wallet_withdrawCash_redeemAmt_textSize">18sp</dimen>
+    <color name="wallet_withdrawCash_redeemAmt_textColor">@color/play_store_green</color>
+    <drawable name="wallet_withdrawCash_redeemAmt_textDrawable">@drawable/ic_bg_dollar_cash_stack_32px</drawable>
+    <string name="wallet_withdrawCash_withdrawAmt_1_text" translatable="false">$1</string>
+    <string name="wallet_withdrawCash_withdrawAmt_2_text" translatable="false">$2</string>
+    <string name="wallet_withdrawCash_withdrawAmt_5_text" translatable="false">$5</string>
+    <string name="wallet_withdrawCash_withdrawAmt_10_text" translatable="false">$10</string>
+
+    <dimen name="wallet_withdrawCash_btnFrame_height">30dp</dimen>
+    <drawable name="wallet_withdrawCash_btnFrame_background">@drawable/bg_round_all_green</drawable>
+    <dimen name="wallet_withdrawCash_btnFrame_textSize">16sp</dimen>
+    <color name="wallet_withdrawCash_btnFrame_textColor">@color/white</color>
+
+    <dimen name="wallet_redeemCoin_ticketFrame_width">0dp</dimen>
+    <dimen name="wallet_redeemCoin_ticketFrame_height">210dp</dimen>
+
+    <dimen name="wallet_redeemCoin_image_width">60dp</dimen>
+    <dimen name="wallet_redeemCoin_image_height">60dp</dimen>
+
+    <dimen name="wallet_redeemCoin_offer_textSize">15sp</dimen>
+    <color name="wallet_redeemCoin_offer_textColor">@color/play_store_green</color>
+
+    <dimen name="wallet_redeemCoin_redeemAmt_textSize">18sp</dimen>
+    <color name="wallet_redeemCoin_redeemAmt_textColor">@color/play_store_green</color>
+    <drawable name="wallet_redeemCoin_redeemAmt_textDrawable">@drawable/ic_bg_dollar_coin_stack_32px</drawable>
+    <string name="wallet_redeemCoin_redeemAmt_20000_text" translatable="false">20000</string>
+    <string name="wallet_redeemCoin_redeemAmt_38000_text" translatable="false">38000</string>
+    <string name="wallet_redeemCoin_redeemAmt_92500_text" translatable="false">92500</string>
+    <string name="wallet_redeemCoin_redeemAmt_180000_text" translatable="false">180000</string>
+
+    <dimen name="wallet_redeemCoin_btnFrame_height">30dp</dimen>
+    <drawable name="wallet_redeemCoin_btnFrame_background">@drawable/bg_round_all_green</drawable>
+    <dimen name="wallet_redeemCoin_btnFrame_textSize">16sp</dimen>
+    <color name="wallet_redeemCoin_btnFrame_textColor">@color/white</color>
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+
+    <!-- For Meta Audience Network, this permits cleartext traffic to localhost: -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">127.0.0.1</domain>
+    </domain-config>
+    <!-- End Meta Audience Network section -->
+
+    <!-- For AdColony and Smaato, this permits all cleartext traffic: -->
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    <!-- End AdColony / Smaato section -->
+
+</network-security-config>

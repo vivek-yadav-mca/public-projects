@@ -1,0 +1,267 @@
+plugins {
+    id 'com.android.application'
+// AndResGuard
+//    id 'AndResGuard'
+// Firebase
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+// AppLovin MAX Ad Review
+//    id 'applovin-quality-service'
+}
+
+//applovin {
+//    apiKey "zaM9DLak1v7rhai7TD5tMAJ5R0H1KFzKN-uvvpeZWgTJqKpELbpcvsbX3V4Eg_xrfL1yZpfGsBGEBLWeQ2Z91D"
+//}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4G"
+    }
+
+    defaultConfig {
+        applicationId "com.o2games.playwin.android"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 5
+        versionName "1.0.4.20220420"
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+//    signingConfigs {
+//        release {
+//            try {
+////                storeFile file("E:\\#1_Work_Space\\Applications\\Android_Studio_Projects\\Spin and Win\\App Bundles\\spinwinkeystore_updated.jks")
+//                storeFile file("E:/#1_Work_Space/Applications/Android_Studio_Projects/Spin and Win/App Bundles/spinwinkeystore_updated.jks")
+//                storePassword ""
+//                keyAlias ""
+//                keyPassword ""
+//                v2SigningEnabled true
+//            } catch (exception) {
+//                throw new InvalidUserDataException(exception.toString())
+//            }
+//        }
+//    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+//            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    // To unlock 3. (additional optimizations), you have to use a different default ProGuard configuration file.
+    // Change the proguard-android.txt parameter to proguard-android-optimize.txt in your build.gradle
+    //  proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+//** AndResGuard **//
+//andResGuard {
+//    // mappingFile = file("./resource_mapping.txt")
+//    mappingFile = null
+//    use7zip = false
+//    useSign = true
+//    // It will keep the origin path of your resources when it's true
+//    keepRoot = false
+//    // If set, name column in arsc those need to proguard will be kept to this value
+//    fixedResName = "arg"
+//    // It will merge the duplicated resources, but don't rely on this feature too much.
+//    // it's always better to remove duplicated resource from repo
+//    mergeDuplicatedRes = true
+//    whiteList = [
+//            // your icon
+//            "R.drawable.icon",
+//            // for fabric
+//            "R.string.com.crashlytics.*",
+//            // for google-services
+//            "R.string.google_app_id",
+//            "R.string.gcm_defaultSenderId",
+//            "R.string.default_web_client_id",
+//            "R.string.ga_trackingId",
+//            "R.string.firebase_database_url",
+//            "R.string.google_api_key",
+//            "R.string.google_crash_reporting_api_key",
+//            "R.string.project_id",
+//    ]
+//    compressFilePattern = [
+//            "*.png",
+//            "*.jpg",
+//            "*.jpeg",
+//            "*.gif",
+//    ]
+//    sevenzip {
+//        artifact = 'com.tencent.mm:SevenZip:1.2.21'
+//        //path = "/usr/local/bin/7za"
+//    }
+//    /**
+//     * Optional: if finalApkBackupPath is null, AndResGuard will overwrite final apk
+//     * to the path which assemble[Task] write to
+//     **/
+//    // finalApkBackupPath = "${project.rootDir}/final.apk"
+//
+//    /**
+//     * Optional: Specifies the name of the message digest algorithm to user when digesting the entries of JAR file
+//     * Only works in V1signing, default value is "SHA-1"
+//     **/
+//    // digestalg = "SHA-256"
+//}
+//** AndResGuard **//
+
+
+repositories {
+    google()
+    mavenCentral()
+//    maven {
+//        name 'Google'
+//        url 'https://maven.google.com/'
+//    }
+
+// Tapjoy
+//    maven {
+//        name "Tapjoy's maven repo"
+//        url 'https://sdk.tapjoy.com/'}
+
+// Tapdaq / ironSource / Tapjoy / Mintegral
+//    maven { url "https://android-sdk.tapdaq.com" }
+//    maven { url "https://android-sdk.is.com/" }
+//    maven { url "https://sdk.tapjoy.com" }
+//    maven { url "https://dl-maven-android.mintegral.com/repository/mbridge_android_sdk_oversea" }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+//  Firebase
+    implementation platform('com.google.firebase:firebase-bom:28.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
+//    implementation 'com.google.firebase:firebase-dynamic-links'
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-messaging'
+//    implementation 'com.google.firebase:firebase-firestore'
+//    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-config'
+
+// PLAY STORE
+    implementation 'com.google.android.play:core:1.10.3'
+//  Google Play Service
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+
+
+// Tapjoy libs SDK // 12.9.0
+    implementation files('libs/tapjoyconnectlibrary.jar') // current v-12.9.0
+
+//// Vungle SDK
+//    implementation 'com.vungle:publisher-sdk-android:6.10.4'
+//
+////  Admob Ads SDK
+//    implementation 'com.google.android.gms:play-services-ads:20.4.0' // latest 20.6.0 on 01-03-2022
+//// Admob Adapters
+//    implementation  'com.google.ads.mediation:adcolony:4.6.5.0'
+//    implementation  'com.google.ads.mediation:applovin:10.3.5.0' // latest 11.2.0 on 01-03-2022
+//    implementation 'com.google.ads.mediation:chartboost:8.3.1.0'
+//    implementation  'com.google.ads.mediation:facebook:6.8.0.0' // latest 6.8.0.0 on 01-03-2022
+//    implementation  'com.google.ads.mediation:ironsource:7.1.12.1.0'
+////    implementation  'com.google.ads.mediation:tapjoy:12.9.0.0'
+//    implementation 'com.google.ads.mediation:unity:3.7.5.0' // latest 4.0.0.0 on 01-03-2022
+//    implementation  'com.google.ads.mediation:vungle:6.10.2.1' // latest 6.10.4.0 on 01-03-2022
+//
+//
+////  Tapdaq
+//    implementation 'com.tapdaq.sdk:Tapdaq-BaseSDK:7.9.1'
+////// Adapters - These will automatically pull ad network dependencies
+//    implementation 'com.tapdaq.sdk:TapdaqAdMobAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqAdColonyAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqAppLovinAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqChartboostAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqFANAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqIronsourceAdapter:7.9.1'
+////    implementation 'com.tapdaq.sdk:TapdaqTapjoyAdapter:7.9.0'
+//    implementation 'com.tapdaq.sdk:TapdaqUnityAdsAdapter:7.9.1'
+//    implementation 'com.tapdaq.sdk:TapdaqVungleAdapter:7.9.1'
+
+
+// AppLovin SDK
+    implementation 'com.applovin:applovin-sdk:10.3.5' // latest 11.2.0 on 01-03-2022
+// AppLovin Adapters
+    implementation 'com.google.android.gms:play-services-base:16.1.0'
+    implementation 'com.applovin.mediation:google-adapter:+'
+    implementation 'com.applovin.mediation:adcolony-adapter:+'
+    implementation 'com.applovin.mediation:chartboost-adapter:+'
+    implementation 'com.applovin.mediation:facebook-adapter:+'
+//    implementation 'com.applovin.mediation:mintegral-adapter:+'
+    implementation 'com.applovin.mediation:ironsource-adapter:+'
+//    implementation 'com.applovin.mediation:tapjoy-adapter:+'
+    implementation 'com.applovin.mediation:unityads-adapter:+'
+    implementation 'com.applovin.mediation:vungle-adapter:+'
+
+
+// Appodeal SDK
+    implementation ('com.appodeal.ads:sdk:2.11.1.+') {
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'admob'
+        exclude group: 'com.appodeal.ads.sdk.networks', module: 'facebook'
+    }
+
+
+//// Unity SDK
+//    implementation  'com.unity3d.ads:unity-ads:3.7.5'
+//// Unity Adapters
+//    implementation "com.unity3d.mediation:mediation-sdk:0.4.0"
+//    implementation "com.unity3d.mediation:unityads-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:admob-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:adcolony-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:applovin-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:facebook-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:ironsource-adapter:0.4.0"
+//    implementation "com.unity3d.mediation:vungle-adapter:0.4.0"
+
+
+
+// Mediation Test Suite
+    //implementation 'com.google.android.ads:mediation-test-suite:2.0.0'
+
+// Facebook Event Logging
+//    implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
+
+// Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+// Lottie Animtion
+    implementation "com.airbnb.android:lottie:4.0.0"
+
+// CCT
+    implementation 'androidx.browser:browser:1.3.0'
+
+}

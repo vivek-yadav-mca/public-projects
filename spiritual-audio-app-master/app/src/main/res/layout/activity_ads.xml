@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdsActivity">
+
+    <FrameLayout
+        android:id="@+id/adView_frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/adView_frameLayout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                <com.mopub.mobileads.MoPubView-->
+<!--                    android:id="@+id/mopubAdView1"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    app:moPubAdSize="match_view" >-->
+<!--                </com.mopub.mobileads.MoPubView>-->
+
+                <LinearLayout
+                    android:id="@+id/ads_activity_banner_250"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/off_white_red"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/rewarded_ad_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    android:text="rewarded ad button" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/splash_middle_red"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/ads_activity_banner_50"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ads_activity_banner_250">
+
+                    <LinearLayout
+                        android:id="@+id/ads_activity_banner_50x1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/off_white_red"
+                        android:orientation="vertical" >
+
+                        <com.google.android.gms.ads.admanager.AdManagerAdView
+                            xmlns:ads="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/adManagerAdView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            ads:adSize="BANNER"
+                            ads:adUnitId="/6499/example/banner"
+                            android:layout_gravity="center">
+                        </com.google.android.gms.ads.admanager.AdManagerAdView>
+
+
+<!--                        <com.applovin.mediation.ads.MaxAdView-->
+<!--                            xmlns:maxads="http://schemas.applovin.com/android/1.0"-->
+<!--                            maxads:adUnitId="YOUR_AD_UNIT_ID"-->
+<!--                            android:background="@color/banner_background_color" &lt;!&ndash; Set background or background color for banners to be fully functional &ndash;&gt;-->
+<!--                        android:layout_width="match_parent"                 &lt;!&ndash; Stretch to the width of the screen for banners to be fully functional &ndash;&gt;-->
+<!--                        android:layout_height="@dimen/banner_height"-->
+<!--                    </com.applovin.mediation.ads.MaxAdView>-->
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ads_activity_banner_50x2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/off_white_red"
+                        android:orientation="vertical">
+
+
+
+                    </FrameLayout>
+
+                    <com.tapdaq.sdk.TMBannerAdView
+                        android:id="@+id/tapdaqBanner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <FrameLayout
+                        android:id="@+id/ads_activity_banner_50x3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/off_white_red"
+                        android:orientation="vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/ads_activity_banner_50x4"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/off_white_red"
+                        android:orientation="vertical" />
+
+                    <FrameLayout
+                        android:id="@+id/ads_activity_banner_50x5"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/off_white_red"
+                        android:orientation="vertical" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ads_activity_banner_50"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/off_white_red"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

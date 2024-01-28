@@ -1,0 +1,485 @@
+<resources>
+    <string name="app_name" translatable="false">dummydata</string>
+    <string name="default_notification_channel_id" translatable="false">channel_miscellaneous</string>
+
+    <string name="profile_privacy_hyperlink">
+        <a href="https://dummydata/terms-of-service/">Terms of Service</a> |
+        <a href="https://dummydata/privacy-policy/">Privacy Policy</a>
+    </string>
+
+    <string-array name="spinner_language">
+        <item>Select language</item>
+        <item>English</item>
+        <item>Español</item>
+        <item>Português</item>
+        <item>Deutsch</item>
+<!--        <item>Pусский</item>-->
+        <item>Français</item>
+        <item>Italiano</item>
+        <item>Indonesia</item>
+        <item>日本</item>
+    </string-array>
+
+    <string name="choose_language_eng" translatable="false">Choose language</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="continue_with_english_lanugage_btn" translatable="false">Continue with \'English\'</string>
+
+    <string name="choose_language_spanish" translatable="false">Elige lengua</string>
+    <string name="language_spanish" translatable="false">Español</string>
+    <string name="continue_with_spanish_lanugage_btn" translatable="false">Continuar con \'Español\'</string>
+
+    <string name="choose_language_portuguese" translatable="false">Escolha o seu idioma</string>
+    <string name="language_portuguese" translatable="false">Português</string>
+    <string name="continue_with_portuguese_lanugage_btn" translatable="false">Continuar com \'Português\'</string>
+
+    <string name="language_german" translatable="false">Deutsch</string>
+    <string name="language_russian" translatable="false">Pусский</string>
+    <string name="language_french" translatable="false">Français</string>
+    <string name="language_italian" translatable="false">Italiano</string>
+    <string name="language_indonesian" translatable="false">Indonesia</string>
+    <string name="language_japanese" translatable="false">日本</string>
+
+    <string name="lang_spinner_toast_german_Deutsch_msg" translatable="false">dummydata in deutscher Sprache wird in Kürze gelauncht. !!</string>
+    <string name="lang_spinner_toast_french_Français_msg" translatable="false">dummydata en langue française sera bientôt lancé !!</string>
+    <string name="lang_spinner_toast_italian_Italiano_msg" translatable="false">dummydata in lingua italiana sarà lanciato a breve !!</string>
+    <string name="lang_spinner_toast_indonesian_Indonesia_msg" translatable="false">dummydata dalam bahasa Indonesia akan segera diluncurkan !!</string>
+    <string name="lang_spinner_toast_japanese_日本_msg" translatable="false">日本語のdummydataはまもなく発売されます。 !!</string>
+
+
+    <string name="signup_checkbox_condition">
+        By continuing, you agree that you are 18+ years old and you accept our
+        <a href="https://dummydata/terms-of-service/">Terms of Service</a> and
+        <a href="https://dummydata/privacy-policy/">Privacy Policy</a>
+    </string>
+
+    <string name="app_gplay_store_url" translatable="false">dummydata/store/apps/details?id=dummydata.playwin.android</string>
+    <string name="app_terms_of_service_url" translatable="false">https://dummydata/view/dummydata-dummydata/terms-of-service</string>
+    <string name="app_privacy_policy_url" translatable="false">https://dummydata/view/dummydata-dummydata/privacy-policy</string>
+
+
+
+    /*****************/
+
+    <string name="please_wait">Please wait....</string>
+    <string name="no_internet">No internet connection !!!</string>
+    <string name="share_app_subject_msg">Play and Win</string>
+    <string name="share_app_msg_body">\nDownload this exciting app which allow you to earn some money in free time.</string>
+    <string name="share_app_chooser_title">Choose an application to share app link</string>
+
+
+    /*************** Notification ******************/
+    <string name="notif_free_chance_title">Free Spins !!!</string>
+    <string name="notif_free_chance_message">Your Free Spin is available !!!</string>
+    <string name="notif_daily_reward_title">FREE 50 COINS available !!!</string>
+    <string name="notif_daily_reward_message">Collect your free 50 Coins</string>
+
+
+    /************** First Screen Activity ********************/
+    <string name="first_developer_dialog_title">Error !!!</string>
+    <string name="first_developer_dialog_msg">Please disable your developer option in order to continue playing this game.</string>
+    <string name="first_developer_dialog_closeBtn">Close</string>
+
+
+    /************** Dialog App not downloaded from playstore ********************/
+    <string name="dialog_app_not_downloaded_title">Error</string>
+    <string name="dialog_app_not_downloaded_msg">Looks like you haven\'t downloaded this game from Google Play Store. \nTo continue playing this game, please uninstall the current version of the app and download it from the Play Store through the link below. \nThank you</string>
+    <string name="dialog_app_not_downloaded_exit_btn">Exit</string>
+    <string name="dialog_app_not_downloaded_download_btn">Download from here</string>
+
+
+    /************** SplashScreen Activity ********************/
+    <string name="welcome_text">Welcome</string>
+    <string name="splash_continue_btn_text">Continue</string>
+
+
+    /************** Main Activity ********************/
+    <string name="menu_HOME">Home</string>
+    <string name="menu_RANK">Rank</string>
+    <string name="menu_GAME">Game</string>
+    <string name="menu_WALLET">Wallet</string>
+    <string name="menu_PROFILE">Setting</string>
+    <string name="main_act_please_wait_loading_offer">Please wait while we load an offer for you.</string>
+    <string name="main_act_no_offer_available">No offer available right now !!</string>
+    <string name="main_act_press_back_to_exit">Press back again to exit </string>
+
+
+    /************** Signup Activity ********************/
+    <string name="signup_button">Continue with Google</string>
+    <string name="signup_close_button">Close</string>
+    <string name="signup_registration_cancelled">Registration cancelled</string>
+    <string name="signup_firebase_error_msg">Error creating your account. Clear app cache / storage and try again after sometime.</string>
+    <string name="signup_verifying_account">Please wait while we verify your account....</string>
+
+
+    /************** Home Fragment ********************/
+    /***** $ \u0024 - Rs \u20A8 ₹ \u20B9 - € \u20ac - £ \u00a3 *****/
+
+    <string name="home_frag_toolbar_currency_symbol">$</string>
+
+    <string name="home_frag_cV_daily_reward">Daily Rewards</string>
+    <string name="home_frag_cV_reward_in">Rewards </string>
+    <string name="home_frag_cV_reward_available">Available</string>
+    <string name="home_frag_item_normal_spin">Spin &amp; Earn</string>
+    <string name="home_frag_item_normal_scratch">Scratch</string>
+    <string name="home_frag_item_normal_flip">Flip &amp; Earn</string>
+
+    <string name="home_frag_offerwall_cardView_title">Special offers \navailable !</string>
+    <string name="home_frag_offerwall_cardView_btn_text">Get upto 10M Coins</string>
+
+    /************** Leaderboard Fragment ********************/
+    <string name="rv_leaderboard_currency_symbol">"$ "</string>
+
+    <string name="leader_frag_toolbar_leaderboard">Leaderboard</string>
+    <string name="leader_frag_toolbar_info">Info</string>
+    <string name="leader_frag_top_note">COMING SOON !! Weekly contest with JACKPOT Prize Money after 1k+ download on Google playstore. Hurry up, share this game with your friends and family.</string>
+    <string name="leader_frag_refreshing_leaderboard_dialog_msg">We are cleaning up and refreshing leaderboard, it may take some time. \nThank you.</string>
+
+    <string name="leader_frag_result_timer_title">Winner result in : </string>
+    <string name="leader_frag_rank_1_player_name">Rank 1</string>
+    <string name="leader_frag_rank_2_player_name">Rank 2</string>
+    <string name="leader_frag_rank_3_player_name">Rank 3</string>
+    <string name="leader_frag_self_player_name">name</string>
+    <string name="leader_frag_self_player_rank">rank</string>
+    <string name="leader_frag_self_player_coins">coins</string>
+    <string name="leader_frag_self_player_balance">balance</string>
+
+    <string name="rv_leaderboard_name">"Name "</string>
+    <string name="rv_leaderboard_rank">"Rank "</string>
+    <string name="rv_leaderboard_userCoins">"Coins "</string>
+
+
+    /************** Game Offer Fragment ********************/
+    <string name="gameOffer_frag_show_more_game">Show</string>
+    <string name="gameOffer_frag_show_less_game">Hide</string>
+
+    <string name="gameOffer_frag_dummydata_quiz_title">Quizzes</string>
+    <string name="gameOffer_frag_dummydata_prediction_title">Prediction Game</string>
+    <string name="gameOffer_frag_action_game_title">Action Games</string>
+    <string name="gameOffer_frag_adventure_game_title">Adventure Games</string>
+    <string name="gameOffer_frag_arcade_game_title">Arcade Games</string>
+    <string name="gameOffer_frag_puzzle_logic_game_title">Puzzle &amp; Logic Games</string>
+    <string name="gameOffer_frag_sports_racing_game_title">Sports &amp; Racing Games</string>
+    <string name="gameOffer_frag_strategy_game_title">Strategy Games</string>
+
+
+    /************** Wallet Fragment ********************/
+    <string name="wall_frag_toolbar_wallet">Wallet</string>
+    <string name="wall_frag_toolbar_transaction_history">Transactions</string>
+    <string name="wall_frag_transaction_history_custom_toast_text">Withdraw history under maintenance. Thank you.</string>
+    <string name="wall_frag_total_coins">Total coins</string>
+    <string name="wall_frag_wallet_balance">Wallet Balance</string>
+    <string name="wall_frag_past_winner_data_not_available">Oops...Data not available !!!</string>
+
+    <string name="walletFrag_cashBalance_text">Cash Balance</string>
+    <string name="walletFrag_coinBalance_text">Coin Balance</string>
+    <string name="wallet_withdrawCash_btnFrame_text">Withdraw Cash</string>
+    <string name="wallet_redeemCoin_btnFrame_text">Convert Coins</string>
+    <string name="wallet_withdrawCash_1usd_disable_msg">Because of too many requests USD $1 Coupon is disabled</string>
+    <string name="wallet_withdrawCash_offer_1usd_paypal_text">Get USD $1 \nPaypal Cash</string>
+    <string name="wallet_withdrawCash_offer_2usd_paypal_text">Get USD $2 \nPaypal Cash</string>
+    <string name="wallet_withdrawCash_offer_5usd_paypal_text">Get USD $5 \nPaypal Cash</string>
+    <string name="wallet_withdrawCash_offer_10usd_paypal_text">Get USD $10 \nPaypal Cash</string>
+    <string name="wallet_withdrawCash_offer_1usd_amazonPay_text">Get USD $1 Amazon Pay Gift Card</string>
+    <string name="wallet_withdrawCash_offer_2usd_amazonPay_text">Get USD $2 Amazon Pay Gift Card</string>
+    <string name="wallet_withdrawCash_offer_5usd_amazonPay_text">Get USD $5 Amazon Pay Gift Card</string>
+    <string name="wallet_withdrawCash_offer_10usd_amazonPay_text">Get USD $10 Amazon Pay Gift Card</string>
+
+    <string name="wallet_redeemCoin_offer_1rs_text">Get USD $1 in your Cash Balance</string>
+    <string name="wallet_redeemCoin_offer_2rs_text">Get USD $2 in your Cash Balance</string>
+    <string name="wallet_redeemCoin_offer_5rs_text">Get USD $5 in your Cash Balance</string>
+    <string name="wallet_redeemCoin_offer_10rs_text">Get USD $10 in your Cash Balance</string>
+
+    <string name="wall_frag_withdraw_your_name">Please enter your name</string>
+    <string name="wall_frag_withdraw_your_mobile">Please enter your mobile number</string>
+    <string name="wall_frag_withdraw_invalid_mobile">Invalid mobile number</string>
+    <string name="wall_frag_withdraw_balance_less_5">Your withdrawal balance is less than \u0024.0.</string>
+    <string name="wall_frag_withdraw_checking_balance">Checking your cash balance....</string>
+    <string name="wall_frag_withdraw_verifying_balance">Verifying your cash balance....</string>
+    <string name="wall_frag_withdraw_no_cash_balance">Oops, you don\'t have enough cash to withdraw</string>
+    <string name="wall_frag_withdraw_sending_request">Please wait while we submit your withdraw request.</string>
+    <string name="wall_frag_withdraw_sending_request_failed">Unable to process your withdraw request. \nCheck your internet connection and try again after sometime</string>
+    <string name="wall_frag_withdraw_checking_coin_balance">Checking your cash balance....</string>
+    <string name="wall_frag_withdraw_verifying_coin_balance">Verifying your cash balance....</string>
+    <string name="wall_frag_withdraw_no_coin_balance">Oops, you don\'t have enough coins to redeem</string>
+    <string name="wall_frag_withdraw_add_cash_from_coin">Please wait while we add cash in your balance.</string>
+    <string name="wall_frag_withdraw_congratulation_coins_added">Congratulations !!! Coins converted successfully. \nCash successfully added to your balance.</string>
+<!--    <string name="wall_frag_withdraw_success_coins_2">\nCash successfully added to your balance.</string>-->
+
+    <string name="wall_frag_my_balance_text">My Balance</string>
+    <string name="wall_frag_daily_lucky_draw_title">Daily lucky draw - 08:00 PM</string>
+    <string name="wall_frag_daily_lucky_draw_timer_text">Ends in - 00h : 00m : 00s</string>
+    <string name="wall_frag_lucky_draw_1st_prize_amount">\u20B9 15</string>
+    <string name="wall_frag_lucky_draw_2nd_prize_amount">\u20B9 10</string>
+    <string name="wall_frag_lucky_draw_3rd_prize_amount">\u20B9 5</string>
+    <string name="wall_frag_lucky_draw_4th_25th_prize_amount">\u20B9 1</string>
+
+    <string name="wall_frag_lucky_draw_1st_prize_text">1st prize</string>
+    <string name="wall_frag_lucky_draw_2nd_prize_text">2nd prize</string>
+    <string name="wall_frag_lucky_draw_3rd_prize_text">3rd prize</string>
+    <string name="wall_frag_lucky_draw_4th_25th_prize_text">4th - 25th prize</string>
+    <string name="wall_frag_lucky_draw_4th_10th_prize_text">4th - 10th prize</string>
+    <string name="wall_frag_lucky_draw_11th_20th_prize_text">11th - 20th prize</string>
+    <string name="wall_frag_lucky_draw_21th_50th_prize_text">21th - 50th prize</string>
+
+    <string name="wall_frag_winner_result_timer_end">Ends in  </string>
+
+    <string name="wall_frag_weekly_lucky_draw_title">Sunday lucky draw - 08:00 PM</string>
+    <string name="wall_frag_weekly_lucky_draw_timer_text">Ends in - 0d : 00h : 00m : 00s</string>
+    <string name="wall_frag_lucky_weekly_1st_prize_amount">\u20B9 101</string>
+    <string name="wall_frag_lucky_weekly_2nd_prize_amount">\u20B9 51</string>
+    <string name="wall_frag_lucky_weekly_3rd_prize_amount">\u20B9 21</string>
+    <string name="wall_frag_lucky_weekly_4th_10th_prize_amount">\u20B9 11</string>
+    <string name="wall_frag_lucky_weekly_11th_20th_prize_amount">\u20B9 5</string>
+    <string name="wall_frag_lucky_weekly_21th_50th_prize_amount">\u20B9 1</string>
+
+    <string name="wall_frag_past_winners_btn_text">Past Winners</string>
+    <string name="wall_frag_how_to_earn_btn_text">How to earn ?</string>
+
+    <string name="wall_frag_withCash_paypal">Paypal</string>
+    <string name="wall_frag_withCash_amazonPay">Amazon Pay Gift Card</string>
+    <string name="wall_frag_withCash_googlePlay">Google Play Gift Card</string>
+
+    <string name="wall_frag_rating_bs_withdraw_note_11">Your request for</string>
+    <string name="wall_frag_rating_bs_withdraw_note_12">is under process, you will receive your Gift Card within 5-7 working days.</string>
+    <string name="wall_frag_rating_bs_title">Thank you for using this app. \n Don\'t forget to rate us on Google Play Store.</string>
+
+
+    /************** Profile Fragment ********************/
+    <string name="pro_frag_toolbar_PROFILE">Account</string>
+    <string name="pro_frag_hello_user">Hello </string>
+    <string name="pro_frag_game_id">Game ID:</string>
+    <string name="pro_frag_email_id">Email ID:</string>
+    <string name="pro_frag_Help">Help</string>
+    <string name="pro_frag_Follow_us">Follow us on :</string>
+    <string name="pro_frag_contact_us">Contact us</string>
+    <string name="pro_frag_choose_language">Language</string>
+    <string name="pro_frag_share_app">Share this app</string>
+    <string name="pro_frag_rate_app">Rate this app</string>
+    <string name="pro_frag_app_version">App Version</string>
+    <string name="pro_frag_bottom_branding">dummydata \nby O2 Games Inc.</string>
+
+    <string name="pro_frag_delete_account_button">Delete account</string>
+    <string name="pro_frag_delete_bsdialog_title">Are you sure you want to delete your account ?</string>
+    <string name="pro_frag_delete_bsdialog_msg">You will not be able to recover your account, game progress, cash/coin balance after deleting.</string>
+    <string name="dialog_delete_button">Delete</string>
+    <string name="pro_frag_delete_toast_msg">"Account successfully deleted"</string>
+
+    <string name="pro_frag_logout_button">Logout</string>
+    <string name="pro_frag_logout_bsdialog_title">Log out ?</string>
+    <string name="pro_frag_logout_bsdialog_msg">Are you sure you want to Logout ?</string>
+    <string name="dialog_logout_cancel_button">Cancel</string>
+    <string name="dialog_logout_button">Logout</string>
+    <string name="pro_frag_logout_toast_msg">"Successfully Logged Out"</string>
+
+    <string name="pro_frag_contact_subject">Payment related issue</string>
+    <string name="pro_frag_contact_name">Name : </string>
+    <string name="pro_frag_contact_email">Email ID :</string>
+    <string name="pro_frag_contact_gameId">Game ID :</string>
+    <string name="pro_frag_contact_mobile">Mobile No. :</string>
+    <string name="pro_frag_contact_mailing_address">mailto:contact.playwin.o2@gmail.com?subject=</string>
+
+
+    /***********************
+
+    *********************/
+
+
+
+    /************** Withdraw History Activity ********************/
+    <string name="with_history_no_entry">Oops !!! <br /> No withdraw details found.</string>
+    /*** Recycler Layout ***/
+    <string name="rv_with_history_currency_symbol">"$ "</string>
+
+    <string name="rv_with_history_trans_id">"Transaction ID: "</string>
+
+
+    /*******************/
+
+    <string name="game_you_have_enough_chance">You have enough chance to play</string>
+    <string name="game_watch_ad_to_get_chance">Watch Ad to get Free Chance</string>
+    <string name="game_no_ad_available">Oops !!! No Ad Available.</string>
+
+    /************** Spinning Activity ********************/
+    <string name="spin_total_coins">Total Coins</string>
+    <string name="spin_chance_left">Spins Left :</string>
+    <string name="spin_get_free_spin">Get FREE Spins</string>
+    <string name="spin_chance_checker_no_chance">No chance left</string>
+    <string name="spin_dialog_you_won">You won</string>
+    <string name="spin_dialog_won_coins">" Coins"</string>
+    <string name="spin_dialog_2x_ad_skipped_coins">Add coins to your balance</string>
+
+
+    /************** Scratch Activity ********************/
+    <string name="scratch_total_coins">Total Coins</string>
+    <string name="scratch_chance_left">Scratch Left :</string>
+    <string name="scratch_get_free_scratch">Get FREE Scratch</string>
+    <string name="scratch_chance_checker_no_chance">No chance left</string>
+    <string name="scratch_you_won">You won</string>
+    <string name="scratch_won_coins">Coins</string>
+
+
+    /************** Flip Activity ********************/
+    <string name="flip_total_coins">Total Coins</string>
+    <string name="flip_chance_left">Flips Left :</string>
+    <string name="flip_get_free_flip">Get FREE Flips</string>
+    <string name="flip_chance_checker_no_chance">No chance left</string>
+    <string name="flip_front_layout_tap_flip">Tap to Flip</string>
+    <string name="flip_back_layout_you_won">You won</string>
+    <string name="flip_back_layout_won_coins">Coins</string>
+
+
+    /*************************
+
+    **************************/
+
+
+    /************** BS Dialog - default ********************/
+    <string name="bsDialog_terms_of_service_text">Terms of Service</string>
+    <string name="bsDialog_privacy_policy_text">Privacy Policy</string>
+
+
+
+    /************** Game/Quiz Timer Bottom Sheet Dialog ********************/
+    <string name="common_timer_bsdialog_timer_text">00 min : 00 sec</string>
+    <string name="common_timer_bsdialog_timer_min_text">min :</string>
+    <string name="common_timer_bsdialog_timer_sec_text">sec</string>
+    <string name="common_timer_bsdialog_time_left_text">Time left : </string>
+    <string name="common_timer_bsdialog_close_session_btn">Close session</string>
+    <string name="common_timer_bsdialog_start_session_btn">Start playing</string>
+    <string name="common_timer_bsdialog_continue_session_btn">Continue</string>
+    <string name="common_timer_bsdialog_collect_token_btn">Collect your coins</string>
+
+    <string name="dedicated_timer_bsdialog_dummydata_title_play">Play </string>
+    <string name="dedicated_timer_bsdialog_dummydata_title_for">for </string>
+    <string name="dedicated_timer_bsdialog_dummydata_title_X_min_and_get">min and get </string>
+    <string name="dedicated_timer_bsdialog_dummydata_title_coins">coins.</string>
+
+    <string name="dedicated_timer_bsdialog_game_title_play">Play </string>
+    <string name="dedicated_timer_bsdialog_game_title_for">for </string>
+    <string name="dedicated_timer_bsdialog_game_title_X_min_and_get">min and get </string>
+    <string name="dedicated_timer_bsdialog_game_title_coins">coins.</string>
+
+
+    /*********** BS Dialog - Info, How to win ***********/
+    <string name="info_how_to_win_bsdialog_title">How do I win Cash ?</string>
+    <string name="info_how_to_win_bsdialog_point_1_text">Win the jackpot and other cash prizes in the daily and sunday contest.</string>
+    <string name="info_how_to_win_bsdialog_point_1_sub_text">Play games and collect coins. The more Coins you have, the higher your chances of your winning !</string>
+    <string name="info_how_to_win_bsdialog_point_2_text">Player will win according to their rank at the time of contest result announcement.</string>
+    <string name="info_how_to_win_bsdialog_point_3_text">Participate in daily and sunday leaderboard by collecting coins and win cash directly.</string>
+    <string name="info_how_to_win_bsdialog_point_4_text">Spin the fortune wheel, scratch the lucky card to win instant cash.</string>
+    <string name="info_how_to_win_bsdialog_btn_text">Earn more coins !</string>
+
+
+    /************** BS Dialog Rating Playstore ********************/
+    <string name="rating_bsdialog_title_11">Your request for</string>
+    <string name="rating_bsdialog_title_12">is under process, you will receive your Gift Card within 5-7 working days.</string>
+    <string name="rating_bsdialog_title">Thank you for using this app. \n Don\'t forget to rate us on Google Play Store.</string>
+    <string name="rating_bsdialog_dont_show_checkbox_text">Don\'t show again</string>
+    <string name="rating_bsdialog_close_btn_text">Close</string>
+
+
+    /************** BS Dialog Redeem ********************/
+    <string name="redeem_bsdialog_title">Get \u00241 USD in your Cash Balance</string>
+    <string name="redeem_bsdialog_message_part1">You will be charged </string>
+    <string name="redeem_bsdialog_message_part2"> coins for this transaction.</string>
+    <string name="redeem_bsdialog_message_part3"> will be added instantly in you wallet after that you can withdraw your cash.</string>
+    <string name="redeem_bsdialog_btnText_Withdraw">Withdraw</string>
+    <string name="redeem_bsdialog_btnText_Redeem_Now">Redeem Now</string>
+
+    /************** BS Dialog Withdraw/Redeem ********************/
+    <string name="withdraw_cash_bsdialog_title">Cash out via</string>
+    <string name="withdraw_cash_bsdialog_min_amt">Minimum \u00241 to withdraw</string>
+    <string name="withdraw_cash_bsdialog_note">Please fill the information carefully. You will receive your amount within 5-7 working days.</string> <!--// We will not take the responsibilty if you enter false information-->
+    <string name="withdraw_cash_bsdialog_your_name_hint">Your Name</string>
+    <string name="withdraw_cash_bsdialog_mobile_number_hint">Mobile Number</string>
+    <string name="withdraw_cash_bsdialog_paypal_email_note">In case your are using paypal withdraw mode, please enter your Paypal registered email else leave it blank</string>
+    <string name="null_string_text">null</string>
+    <string name="na_string_text">n/a</string>
+    <string name="withdraw_cash_bsdialog_registered_email_hint">Registered Email</string>
+
+
+<!--    /************** Contact Us Bottom Sheet Dialog ********************/-->
+    <string name="contact_bsDialog_title">Contact Us</string>
+    <string name="contact_bsDialog_fullName">Full Name*</string>
+    <string name="contact_bsDialog_emailId">Email ID*</string>
+    <string name="contact_bsDialog_mobileNo">Mobile No*</string>
+    <string name="contact_bsDialog_issue">Issue Detail*</string>
+    <string name="contact_bsDialog_issueDetail">Please describe your issue</string>
+    <string name="contact_bsDialog_submit_button">Raise a ticket</string>
+
+
+    /************** Dialog Chance *******************/
+    <string name="dialog_after_interstitial_congratulation">Congratulations !!!</string>
+    <string name="dialog_after_interstitial_16_chances">You got 16 Chances</string>
+    <string name="dialog_after_interstitial_10_chances">You got 10 Chances</string>
+    <string name="dialog_after_interstitial_chance_add_button">Add chances to your account</string>
+    <string name="dialog_after_interstitial_coins1">You won </string>
+    <string name="dialog_after_interstitial_coins2"> coins</string>
+    <string name="dialog_after_interstitial_getting_coins_ready">Double your coins in </string>
+    <string name="dialog_after_interstitial_double_reward_btn_text">Double your coins</string>
+    <string name="dialog_after_interstitial_claim_reward_btn_text">Claim your coins</string>
+
+
+
+
+    /************** Dialog Daily Reward *******************/
+    <string name="dialog_daily_reward_title">FREE Daily Reward</string>
+    <string name="dialog_daily_reward_1">50</string>
+    <string name="dialog_daily_reward_2">125</string>
+    <string name="dialog_daily_reward_3">250</string>
+    <string name="dialog_daily_reward_4">375</string>
+    <string name="dialog_daily_reward_5">500</string>
+    <string name="dialog_daily_reward_free_button">FREE</string>
+    <string name="dialog_daily_reward_watch_ad_button">Watch Ad</string>
+
+
+    /************** Dialog Force Update *******************/
+    <string name="dialog_force_update_title">Update dummydata</string>
+    <string name="dialog_force_update_msg">dummydata recommends that you update to the latest version. To avoid bugs it is necessary to update the app right now.</string>
+    <string name="dialog_force_update_button">Update</string>
+    <string name="dialog_force_update_google_play">Google Play</string>
+
+
+
+    /****************** Dialog Maintenance *******************/
+    <string name="dialog_maintenance_title">** Under maintenance !!!</string>
+
+    <string name="dialog_maintenance_msg_1">App is currently under maintenance. <br /> Please come back after sometime. <br /> Thank you.</string>
+    <string name="dialog_maintenance_msg_2">Thank you for your patience. <br /> The app is still under maintenance. <br /> Please come back after some time.</string>
+    <string name="dialog_maintenance_expected_time">Expected time :</string>
+    <string name="dialog_maintenance_exit_button">Exit</string>
+    <string name="dialog_maintenance_refresh_button">Refresh</string>
+
+
+    /****************** Dialog No Internet *******************/
+    <string name="dialog_no_internet_title">Please check your internet connection !!!!</string>
+    <string name="dialog_no_internet_exit_button">Exit</string>
+    <string name="dialog_no_internet_reload_button">Reload</string>
+
+
+    /****************** Dialog progress bar SMALL *******************/
+    <string name="dialog_progress_bar_small_loading_text">Loading...</string>
+
+
+    /****************** Dialog Withdraw Confirmation *******************/
+    <string name="dialog_with_confirm_successful">Successful</string>
+    <string name="dialog_with_confirm_name">Name : </string>
+    <string name="dialog_with_confirm_email">Email : </string>
+    <string name="dialog_with_confirm_mobile_number">Mobile No. : </string>
+    <string name="dialog_with_confirm_payment_mode">Payment mode : </string>
+    <string name="dialog_with_confirm_payment_regEmail">Registered Email : </string>
+    <string name="dialog_with_confirm_payment_amt">Amount withdrawn : </string>
+    <string name="dialog_with_confirm_transaction_id">Transaction ID: </string>
+    <string name="dialog_with_confirm_withdraw_date">Withdraw Date : </string>
+    <string name="dialog_with_confirm_follow_us">Follow us on:</string>
+    <string name="dialog_with_confirm_thankyou_msg">Thank you for choosing <br /> dummydata by O2 Games Inc.</string>
+    <string name="dialog_with_confirm_with_history_button">Close</string>
+
+
+
+    /****************** Dialog Blocked User *******************/
+    <string name="dialog_blocked_user_msg">Your account has been blocked due to invalid activity on your account.</string>
+    <string name="dialog_blocked_user_close_btn">Close</string>
+
+
+</resources>

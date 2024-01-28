@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_round_top_darker_blue_app_theme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/frameLayout7"
+                android:layout_width="30dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_round_all_white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/bsdialog_redeem_coin_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/redeem_bsdialog_title"
+                android:textSize="20sp"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="200dp"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/white"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/bsdialog_redeem_coin_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/redeem_bsdialog_message_part1"
+                android:textSize="17sp"
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/withdrawRedeem_bsDialog_btn_frame"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_clicked_drawble_green_selector"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+                <TextView
+                    android:id="@+id/withdrawRedeem_bsDialog_btn_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="@string/redeem_bsdialog_btnText_Redeem_Now"
+                    android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

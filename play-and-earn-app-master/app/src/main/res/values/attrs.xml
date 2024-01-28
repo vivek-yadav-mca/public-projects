@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    For Flip View-->
+        <declare-styleable name="flip_view">
+            <attr name="flipOnTouch" format="boolean"/>
+            <attr name="flipDuration" format="integer"/>
+            <attr name="flipType" format="string"/>
+            <attr name="flipFrom" format="string"/>
+            <attr name="flipEnabled" format="boolean"/>
+            <attr name="flipOnceEnabled" format="boolean"/>
+            <attr name="autoFlipBack" format="boolean"/>
+            <attr name="autoFlipBackTime" format="integer"/>
+            <attr name="animFlipInId" format="reference"/>
+            <attr name="animFlipOutId" format="reference"/>
+        </declare-styleable>
+<!--    For Flip View-->
+
+
+<!--    For Scratch View-->
+    <declare-styleable name="ScratchView">
+        <attr name="overlay_image" format="reference"/>
+        <attr name="tile_mode" format="string"/>
+        <attr name="overlay_width" format="dimension"/>
+        <attr name="overlay_height" format="dimension"/>
+    </declare-styleable>
+<!--    For Scratch View-->
+
+    <declare-styleable name="ArcDrawer">
+        <attr name="arc_width" format="dimension"/>
+        <attr name="arc_cropDirection" format="enum">
+            <enum name="cropInside" value="0"/>
+            <enum name="cropOutside" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="SpinWheelView">
+        <attr name="swBackgroundColor" format="color" />
+        <attr name="swCursor" format="reference" />
+        <attr name="swCenterImage" format="reference" />
+        <attr name="swEdgeColor" format="color" />
+        <attr name="swEdgeWidth" format="integer" />
+        <attr name="swTopTextColor" format="color" />
+        <attr name="swTopTextPadding" format="dimension" />
+        <attr name="swTopTextSize" format="dimension" />
+        <attr name="swSecondaryTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>

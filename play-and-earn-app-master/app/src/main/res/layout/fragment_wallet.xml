@@ -1,0 +1,1893 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_wallet_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue_app_theme"
+    tools:context=".fragment.WalletFragment">
+
+    <FrameLayout
+        android:id="@+id/wallet_top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/darker_blue_app_theme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center|left"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/baloo"
+                android:gravity="center"
+                android:text="@string/wall_frag_toolbar_wallet"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/withdraw_history_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/baloo"
+                android:visibility="gone"
+                android:textSize="15sp"
+                android:text="@string/wall_frag_toolbar_transaction_history"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/wall_frag_cashBalance_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/darker_blue_app_theme"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wallet_top_toolbar"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="@string/walletFrag_cashBalance_text"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/walletFrag_userAvailableCashBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="4dp"
+                    android:drawableStart="@drawable/ic_bg_dollar_cash_stack_32px"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="\u0024 0.00"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/walletFrag_withdrawBtn_fL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_button_clicked_drawble_green_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wall_frag_cashBalance_cardView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:drawableStart="@drawable/ic_arrow_down_24px"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/wall_frag_coinBalance_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardBackgroundColor="@color/darker_blue_app_theme"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wall_frag_cashBalance_cardView"
+        app:strokeColor="@color/white"
+        app:strokeWidth="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="@string/walletFrag_coinBalance_text"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/walletFrag_userCoinBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-2dp"
+                    android:layout_marginBottom="4dp"
+                    android:drawableStart="@drawable/ic_bg_dollar_coin_stack_32px"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="\u0024 0.00"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/walletFrag_redeemBtn_fL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_button_clicked_drawble_green_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/wall_frag_cashBalance_cardView">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="6dp"
+                    android:drawableStart="@drawable/ic_arrow_down_24px"
+                    android:drawablePadding="4dp"
+                    android:drawableTint="@color/white"
+                    android:fontFamily="@font/baloo"
+                    android:gravity="center"
+                    android:text="@string/wallet_redeemCoin_btnFrame_text"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <ScrollView
+        android:id="@+id/walletFrag_withdrawCash_scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wall_frag_coinBalance_cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:id="@+id/withdrawCash_amazonPay_scrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/withdrawCash_amazonPay_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/walletFrag_withdrawCash_scrollLayout_topTextView">
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toStartOf="@+id/withdrawCash_2usd_amazonPay_coupon_frameL"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/walletFrag_withdrawCash_scrollLayout_topTextView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_1usd_amazonPay_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_1usd_amazonPay_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_1usd_amazonPay_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_amazon_pay_png" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_1usd_amazonPay_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text="@string/wallet_withdrawCash_offer_1usd_amazonPay_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_1usd_amazonPay_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_1usd_amazonPay_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_1usd_amazonPay_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_1usd_amazonPay_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_1_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_1usd_amazonPay_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_1usd_amazonPay_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_1usd_amazonPay_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_1usd_amazonPay_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_1usd_amazonPay_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <FrameLayout
+                            android:id="@+id/withdrawCash_1usd_amazonPay_disableFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            tools:visibility="gone"
+                            android:background="@drawable/bg_round_all_white"
+                            android:backgroundTint="#99FFFFFF">
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="4dp"
+                                android:background="@color/white"
+                                android:text="@string/wallet_withdrawCash_1usd_disable_msg"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/baloo" />
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_2usd_amazonPay_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_2usd_amazonPay_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_2usd_amazonPay_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_2usd_amazonPay_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_2usd_amazonPay_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_amazon_pay_png" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_2usd_amazonPay_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text="@string/wallet_withdrawCash_offer_2usd_amazonPay_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_2usd_amazonPay_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_2usd_amazonPay_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_2usd_amazonPay_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_2usd_amazonPay_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_2_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_2usd_amazonPay_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_2usd_amazonPay_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_2usd_amazonPay_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_2usd_amazonPay_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_2usd_amazonPay_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_2usd_amazonPay_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_5usd_amazonPay_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_2usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_5usd_amazonPay_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_5usd_amazonPay_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_5usd_amazonPay_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_5usd_amazonPay_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_amazon_pay_png" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_5usd_amazonPay_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text="@string/wallet_withdrawCash_offer_5usd_amazonPay_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_5usd_amazonPay_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_5usd_amazonPay_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_5usd_amazonPay_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_5usd_amazonPay_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_5_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_5usd_amazonPay_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_5usd_amazonPay_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_5usd_amazonPay_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_5usd_amazonPay_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_5usd_amazonPay_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_5usd_amazonPay_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_10usd_amazonPay_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_5usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_10usd_amazonPay_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_10usd_amazonPay_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_10usd_amazonPay_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_10usd_amazonPay_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_amazon_pay_png" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_10usd_amazonPay_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:maxLines="2"
+                                android:text="@string/wallet_withdrawCash_offer_10usd_amazonPay_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_10usd_amazonPay_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_10usd_amazonPay_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_10usd_amazonPay_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_10usd_amazonPay_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_10_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_10usd_amazonPay_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_10usd_amazonPay_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_10usd_amazonPay_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_10usd_amazonPay_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_10usd_amazonPay_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_10usd_amazonPay_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:id="@+id/withdrawCash_paypal_scrollLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/withdrawCash_paypal_layout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/walletFrag_withdrawCash_scrollLayout_topTextView">
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_1usd_paypal_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toStartOf="@+id/withdrawCash_2usd_amazonPay_coupon_frameL"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/walletFrag_withdrawCash_scrollLayout_topTextView">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_1usd_paypal_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_1usd_paypal_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_paypal_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_1usd_paypal_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_paypal" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_1usd_paypal_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_offer_1usd_paypal_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_1usd_paypal_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_1usd_paypal_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_1usd_paypal_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_1usd_paypal_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_1_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_1usd_paypal_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_1usd_paypal_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_1usd_paypal_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_1usd_paypal_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_paypal_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_1usd_paypal_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <FrameLayout
+                            android:id="@+id/withdrawCash_1usd_paypal_disableFrame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:visibility="gone"
+                            tools:visibility="visible"
+                            android:background="@drawable/bg_round_all_white"
+                            android:backgroundTint="#99FFFFFF">
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="4dp"
+                                android:background="@color/white"
+                                android:text="@string/wallet_withdrawCash_1usd_disable_msg"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/baloo" />
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_2usd_paypal_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_2usd_paypal_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_2usd_paypal_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_2usd_paypal_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_2usd_paypal_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_paypal" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_2usd_paypal_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_offer_2usd_paypal_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_2usd_paypal_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_2usd_paypal_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_2usd_paypal_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_2usd_paypal_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_2_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_2usd_paypal_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_2usd_paypal_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_2usd_paypal_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_2usd_paypal_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_2usd_paypal_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_2usd_paypal_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_5usd_paypal_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_2usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_5usd_paypal_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_5usd_paypal_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_5usd_paypal_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_5usd_paypal_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_paypal" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_5usd_paypal_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_offer_5usd_paypal_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_5usd_paypal_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_5usd_paypal_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_5usd_paypal_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_5usd_paypal_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_5_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_5usd_paypal_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_5usd_paypal_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_5usd_paypal_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_5usd_paypal_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_5usd_paypal_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_5usd_paypal_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/withdrawCash_10usd_paypal_coupon_frameL"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/wallet_withdrawCash_ticketFrame_height"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/withdrawCash_5usd_amazonPay_coupon_frameL"
+                        app:layout_constraintTop_toTopOf="@+id/withdrawCash_1usd_amazonPay_coupon_frameL">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                                android:id="@+id/withdrawCash_10usd_paypal_ticket"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                                app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                                app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                                app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                                app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                                app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                                app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                                app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                                app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                                app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                                app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                                app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                                app:ticketShowBorder="false"
+                                app:ticketShowDivider="true" />
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/withdrawCash_10usd_paypal_imageCV"
+                                android:layout_width="@dimen/wallet_withdrawCash_imageCV_width"
+                                android:layout_height="@dimen/wallet_withdrawCash_imageCV_height"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="8dp"
+                                android:layout_marginEnd="20dp"
+                                android:scaleType="centerCrop"
+                                app:cardCornerRadius="@dimen/wallet_withdrawCash_imageCV_cornerRadius"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/withdrawCash_10usd_paypal_ticket"
+                                app:srcCompat="@drawable/ic_payment_amazon_pay_png">
+
+                                <ImageView
+                                    android:id="@+id/withdrawCash_10usd_paypal_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/ic_payment_paypal" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:id="@+id/withdrawCash_10usd_paypal_text"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginEnd="8dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_offer_10usd_paypal_text"
+                                android:textColor="@color/wallet_withdrawCash_offer_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_offer_textSize"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_10usd_paypal_ticket"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_10usd_paypal_ticket"
+                                app:layout_constraintTop_toBottomOf="@+id/withdrawCash_10usd_paypal_imageCV" />
+
+                            <TextView
+                                android:id="@+id/withdrawCash_10usd_paypal_coinText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableStart="@drawable/wallet_withdrawCash_redeemAmt_textDrawable"
+                                android:drawablePadding="5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_withdrawCash_withdrawAmt_10_text"
+                                android:textColor="@color/wallet_withdrawCash_redeemAmt_textColor"
+                                android:textSize="@dimen/wallet_withdrawCash_redeemAmt_textSize"
+                                app:layout_constraintBottom_toTopOf="@+id/withdrawCash_10usd_paypal_btn"
+                                app:layout_constraintEnd_toEndOf="@+id/withdrawCash_10usd_paypal_btn"
+                                app:layout_constraintStart_toStartOf="@+id/withdrawCash_10usd_paypal_btn" />
+
+                            <FrameLayout
+                                android:id="@+id/withdrawCash_10usd_paypal_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/wallet_withdrawCash_btnFrame_height"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:background="@drawable/bg_round_all_transparent_fill_color"
+                                app:layout_constraintBottom_toBottomOf="@+id/withdrawCash_10usd_paypal_ticket"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:id="@+id/withdrawCash_10usd_paypal_btn_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/baloo"
+                                    android:gravity="center"
+                                    android:text="@string/wallet_withdrawCash_btnFrame_text"
+                                    android:textColor="@color/wallet_withdrawCash_btnFrame_textColor"
+                                    android:textSize="@dimen/wallet_withdrawCash_btnFrame_textSize" />
+                            </FrameLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </FrameLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/walletFrag_redeemCoin_scrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wall_frag_coinBalance_cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/redeemCoin_coinToCash_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/walletFrag_redeemCoin_scrollLayout_topTextView">
+
+                <FrameLayout
+                    android:id="@+id/redeemCoin_rs1_coinToCash_coupon_frameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wallet_redeemCoin_ticketFrame_height"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@+id/redeemCoin_rs2_coinToCash_coupon_frameL"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/walletFrag_redeemCoin_scrollLayout_topTextView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                            android:id="@+id/redeemCoin_rs1_ticket"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                            app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                            app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                            app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                            app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                            app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                            app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                            app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                            app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                            app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                            app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                            app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4.5dp"
+                            android:background="@drawable/bg_home_notif_game_chance_red"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginEnd="-1dp"
+                                android:layout_marginBottom="-3.5dp"
+                                android:fontFamily="@font/baloo"
+                                android:text="-10%"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/redeemCoin_rs1_image"
+                            android:layout_width="@dimen/wallet_redeemCoin_image_width"
+                            android:layout_height="@dimen/wallet_redeemCoin_image_height"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs1_ticket"
+                            app:srcCompat="@drawable/ic_dollar_cash_stack_128px" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs1_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_offer_1rs_text"
+                            android:textColor="@color/wallet_redeemCoin_offer_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_offer_textSize"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs1_ticket"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs1_ticket"
+                            app:layout_constraintTop_toBottomOf="@+id/redeemCoin_rs1_image" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs1_coinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/ic_bg_dollar_coin_stack_32px"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_redeemAmt_20000_text"
+                            android:textColor="@color/wallet_redeemCoin_redeemAmt_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_redeemAmt_textSize"
+                            app:layout_constraintBottom_toTopOf="@+id/redeemCoin_rs1_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs1_btn"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs1_btn" />
+
+                        <FrameLayout
+                            android:id="@+id/redeemCoin_rs1_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wallet_redeemCoin_btnFrame_height"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/bg_round_all_transparent_fill_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs1_ticket"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/redeemCoin_rs1_btn_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_redeemCoin_btnFrame_text"
+                                android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                                android:textSize="@dimen/wallet_redeemCoin_btnFrame_textSize" />
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/redeemCoin_rs2_coinToCash_coupon_frameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wallet_redeemCoin_ticketFrame_height"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs1_coinToCash_coupon_frameL"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/redeemCoin_rs1_coinToCash_coupon_frameL"
+                    app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs1_coinToCash_coupon_frameL">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                            android:id="@+id/redeemCoin_rs2_ticket"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                            app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                            app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                            app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                            app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                            app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                            app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                            app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                            app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                            app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                            app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                            app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4.5dp"
+                            android:background="@drawable/bg_home_notif_game_chance_red"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="-3.5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="-12.5%"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/redeemCoin_rs2_image"
+                            android:layout_width="@dimen/wallet_redeemCoin_image_width"
+                            android:layout_height="@dimen/wallet_redeemCoin_image_height"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs2_ticket"
+                            app:srcCompat="@drawable/ic_dollar_cash_stack_128px" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs2_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_offer_2rs_text"
+                            android:textColor="@color/wallet_redeemCoin_offer_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_offer_textSize"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs2_ticket"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs2_ticket"
+                            app:layout_constraintTop_toBottomOf="@+id/redeemCoin_rs2_image" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs2_coinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/ic_bg_dollar_coin_stack_32px"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_redeemAmt_38000_text"
+                            android:textColor="@color/wallet_redeemCoin_redeemAmt_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_redeemAmt_textSize"
+                            app:layout_constraintBottom_toTopOf="@+id/redeemCoin_rs2_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs2_btn"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs2_btn" />
+
+                        <FrameLayout
+                            android:id="@+id/redeemCoin_rs2_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wallet_redeemCoin_btnFrame_height"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/bg_round_all_transparent_fill_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs2_ticket"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/redeemCoin_rs2_btn_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_redeemCoin_btnFrame_text"
+                                android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                                android:textSize="@dimen/wallet_redeemCoin_btnFrame_textSize" />
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/redeemCoin_coinToCash_layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/redeemCoin_coinToCash_layout_1">
+
+                <FrameLayout
+                    android:id="@+id/redeemCoin_rs5_coinToCash_coupon_frameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wallet_redeemCoin_ticketFrame_height"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/redeemCoin_rs10_coinToCash_coupon_frameL"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redeemCoin_rs1_coinToCash_coupon_frameL">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                            android:id="@+id/redeemCoin_rs5_ticket"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                            app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                            app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                            app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                            app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                            app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                            app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                            app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                            app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                            app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                            app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                            app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4.5dp"
+                            android:background="@drawable/bg_home_notif_game_chance_red"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginEnd="1dp"
+                                android:layout_marginBottom="-3.5dp"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="-17.5%"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+
+                        <ImageView
+                            android:id="@+id/redeemCoin_rs5_image"
+                            android:layout_width="@dimen/wallet_redeemCoin_image_width"
+                            android:layout_height="@dimen/wallet_redeemCoin_image_height"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs5_ticket"
+                            app:srcCompat="@drawable/ic_dollar_cash_stack_128px" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs5_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_offer_5rs_text"
+                            android:textColor="@color/wallet_redeemCoin_offer_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_offer_textSize"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs5_ticket"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs5_ticket"
+                            app:layout_constraintTop_toBottomOf="@+id/redeemCoin_rs5_image" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs5_coinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/ic_bg_dollar_coin_stack_32px"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_redeemAmt_92500_text"
+                            android:textColor="@color/wallet_redeemCoin_redeemAmt_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_redeemAmt_textSize"
+                            app:layout_constraintBottom_toTopOf="@+id/redeemCoin_rs5_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs5_btn"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs5_btn" />
+
+                        <FrameLayout
+                            android:id="@+id/redeemCoin_rs5_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wallet_redeemCoin_btnFrame_height"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/bg_round_all_transparent_fill_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs5_ticket"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/redeemCoin_rs5_btn_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_redeemCoin_btnFrame_text"
+                                android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                                android:textSize="@dimen/wallet_redeemCoin_btnFrame_textSize" />
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/redeemCoin_rs10_coinToCash_coupon_frameL"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/wallet_redeemCoin_ticketFrame_height"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs5_coinToCash_coupon_frameL"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/redeemCoin_rs5_coinToCash_coupon_frameL"
+                    app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs5_coinToCash_coupon_frameL">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.o2games.playwin.android.ticketView_vipulasri.TicketView
+                            android:id="@+id/redeemCoin_rs10_ticket"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:ticketCornerRadius="@dimen/wallet_redeemCashCoins_ticket_cornerRadius"
+                            app:ticketCornerType="@integer/wallet_redeemCashCoins_ticket_cornerType"
+                            app:ticketDividerColor="@color/wallet_redeemCashCoins_ticket_dividerColor"
+                            app:ticketDividerDashGap="@dimen/wallet_redeemCashCoins_ticket_dividerDashGap"
+                            app:ticketDividerDashLength="@dimen/wallet_redeemCashCoins_ticket_dividerDashLength"
+                            app:ticketDividerPadding="@dimen/wallet_redeemCashCoins_ticket_dividerPadding"
+                            app:ticketDividerType="@integer/wallet_redeemCashCoins_ticket_dividerType"
+                            app:ticketDividerWidth="@dimen/wallet_redeemCashCoins_ticket_dividerWidth"
+                            app:ticketElevation="@dimen/wallet_redeemCashCoins_ticket_cornerElevation"
+                            app:ticketOrientation="@integer/wallet_redeemCashCoins_ticket_orientation"
+                            app:ticketScallopPositionPercent="@integer/wallet_redeemCashCoins_ticket_scallopPostion"
+                            app:ticketScallopRadius="@dimen/wallet_redeemCashCoins_ticket_scallopRadius"
+                            app:ticketShowBorder="false"
+                            app:ticketShowDivider="true" />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginEnd="4.5dp"
+                            android:background="@drawable/bg_home_notif_game_chance_red"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="-2dp"
+                                android:layout_marginEnd="-1dp"
+                                android:layout_marginBottom="-3.5dp"
+                                android:fontFamily="@font/baloo"
+                                android:text="-22%"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </FrameLayout>
+
+
+                        <ImageView
+                            android:id="@+id/redeemCoin_rs10_image"
+                            android:layout_width="@dimen/wallet_redeemCoin_image_width"
+                            android:layout_height="@dimen/wallet_redeemCoin_image_height"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/redeemCoin_rs10_ticket"
+                            app:srcCompat="@drawable/ic_dollar_cash_stack_128px" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs10_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_offer_10rs_text"
+                            android:textColor="@color/wallet_redeemCoin_offer_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_offer_textSize"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs10_ticket"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs10_ticket"
+                            app:layout_constraintTop_toBottomOf="@+id/redeemCoin_rs10_image" />
+
+                        <TextView
+                            android:id="@+id/redeemCoin_rs10_coinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:drawableStart="@drawable/ic_bg_dollar_coin_stack_32px"
+                            android:drawablePadding="5dp"
+                            android:fontFamily="@font/baloo"
+                            android:gravity="center"
+                            android:text="@string/wallet_redeemCoin_redeemAmt_180000_text"
+                            android:textColor="@color/wallet_redeemCoin_redeemAmt_textColor"
+                            android:textSize="@dimen/wallet_redeemCoin_redeemAmt_textSize"
+                            app:layout_constraintBottom_toTopOf="@+id/redeemCoin_rs10_btn"
+                            app:layout_constraintEnd_toEndOf="@+id/redeemCoin_rs10_btn"
+                            app:layout_constraintStart_toStartOf="@+id/redeemCoin_rs10_btn" />
+
+                        <FrameLayout
+                            android:id="@+id/redeemCoin_rs10_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/wallet_redeemCoin_btnFrame_height"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/bg_round_all_transparent_fill_color"
+                            app:layout_constraintBottom_toBottomOf="@+id/redeemCoin_rs10_ticket"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/redeemCoin_rs10_btn_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/baloo"
+                                android:gravity="center"
+                                android:text="@string/wallet_redeemCoin_btnFrame_text"
+                                android:textColor="@color/wallet_redeemCoin_btnFrame_textColor"
+                                android:textSize="@dimen/wallet_redeemCoin_btnFrame_textSize" />
+                        </FrameLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
